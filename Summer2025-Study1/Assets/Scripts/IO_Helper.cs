@@ -1,52 +1,276 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
 using System.Runtime.CompilerServices; // needed for file IO
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEditor.Experimental;
 
 public class IO_Helper : MonoBehaviour
 {
+    // assign these two to what it says
     public Transform user_cam_position;
     public Transform user_cam_orientation;
+    // should be the head of the NPC
     public Transform target_obj;
+
+    // assign to members of UI
+    public TMP_InputField subject_name_input;
+    public TMP_InputField subject_id_input;
+    public TMP_InputField session_number_input;
+    public TMP_InputField experimenter_name_input;
+    public TMP_InputField save_folder_input;
+    public Toggle append_toggle;
+    public TMP_Dropdown session_type_input;
+    public TMP_Text warning_text;
+    public GameObject canvas;
+    public GameObject skintone_parent;
+
+    private string selected_model = "female";
+    private int selected_skintone = 0;
+
     private DateTime start_time;
-    private string output_path;
+
+    private bool isExperimentStarted;
+    // determines amount to round to for all files
+    private const int digits_to_round = 6;
+
+    // FOV is actually different horizontally than vertically for the quest 3, maybe fix later if needed
+    private const int FOV = 110;
+
+    // polling rate in seconds for recording Average.csv
+    // default is 60 seconds
+    private const float average_polling_rate = 60;
+    private double moving_gaze_sum;
+    private double moving_dist_sum;
+
+    private DateTime last_poll_time;
+
+    // similar to SkintoneButtonClicked
+    public void ModelButtonClicked(GameObject button_parent)
+    {
+        string calling_button = button_parent.name;
+        selected_model = calling_button; // record last clicked model
+        // other_button is male if the button pressed was the female button, etc.
+        string other_button = calling_button == "Female" ? "Male" : "Female";
+
+        // enable background for the clicked button
+        GameObject background_to_enable = GameObject.Find(calling_button).transform.Find("SelectedBackground").gameObject;
+        background_to_enable.SetActive(true);
+        // disable other background
+        GameObject bg_to_disable = GameObject.Find(other_button).transform.Find("SelectedBackground").gameObject;
+        bg_to_disable.SetActive(false);
+    }
+
+    // when a button is clicked
+    // 1: record it's input
+    // 2: disable the rest of the backgrounds
+    // 3: enable it's corresponding selected background
+    public void SkintoneButtonClicked(GameObject button_parent)
+    {
+        string calling_button = button_parent.name;
+        // 1: get the number attached to each (Color0, Color1)
+        selected_skintone = int.Parse(calling_button[5].ToString());
+        // 2: disable all the selectedbackgrounds
+        for (int i = 0; i <= 7; i++)
+        {
+            // SelectedBackground is a child of all button parent game objects
+            // and is that blue box around the button
+            GameObject background_color = GameObject.Find("Color" + i.ToString()).transform.Find("SelectedBackground").gameObject;
+            background_color.SetActive(false);
+        }
+        // enable the blue box around the button that was just clicked
+        GameObject color_to_add = button_parent.transform.Find("SelectedBackground").gameObject;
+        color_to_add.SetActive(true);
+    }
 
     void Start()
     {
-        // record starting time
-        start_time = System.DateTime.Now;
-
-        // get file path for output csv
-        output_path = "C:\\Users\\John\\Desktop\\test.csv";
-        // ensure file isn't already existing
-
-        if (File.Exists(output_path))
-        {
-            Debug.LogError("File already exists at: " + output_path);
-        }
-
-        // file doesn't exist, make it
-        // write column names
-        string column_names = "ppid,time,system time,distance,gaze\n";
-        File.WriteAllText(output_path, column_names);
+        // clear placeholder warning from the UI
+        warning_text.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        // modify maybe
-        const int digits_to_round = 6;
+        // only write when game has started
+        if (isExperimentStarted)
+        {
+            RecordData();
+        }
+    }
 
+    // simply write to file
+    // a new line is not included when writing to the file
+    void WriteToFile(string file_path, string line)
+    {
+        try {
+            File.AppendAllText(file_path, line);
+        }
+        catch (IOException e)
+        {
+            Debug.Log(e.Message);
+            if (e.Message.Contains("Sharing violation"))
+            {
+                Debug.Log("Data is not being recorded. Please close out of any programs with any of the .csv files open to continue recording data.");
+            }
+            //Application.Quit();
+        }
+    }
+
+    public void HandleButtonPressed()
+    {
+        // clean up white space around input
+        CleanUIInput();
+
+        // display warning if there are any, clear if there are none
+        List<string> warnings = GetWarningsForUI();
+        warning_text.text = warnings.Count > 0 ? warnings[0] : "";
+
+        // if there are no warnings, start experiment
+        if(warnings.Count == 0)
+        {
+            StartExperiment();
+        }
+    }
+
+    void StartExperiment()
+    {
+        isExperimentStarted = true;
+        // set session number to 1 (the placeholder) if the user's input is empty
+        session_number_input.text = session_number_input.text == "" ? "1" : session_number_input.text;
+
+        // disable starting experiment UI
+        // do not disable the UI as a whole because it needs to run the Update() function still
+        canvas.SetActive(false);
+
+        // start recording data
+        // record experiment starting time
+        start_time = System.DateTime.Now;
+        last_poll_time = start_time;
+
+        // create empty files
+        WriteHeadersIfFilesNonexistent();
+    }
+
+    void CleanUIInput()
+    {
+        // trim leading and trailing whitespaces from every input if needed
+        subject_name_input.text = subject_name_input.text.Trim();
+        subject_id_input.text = subject_id_input.text.Trim();
+        session_number_input.text = session_number_input.text.Trim();
+        experimenter_name_input.text = experimenter_name_input.text.Trim();
+    }
+
+    List<string> GetWarningsForUI()
+    {
+        List<string> warnings = new List<string>();
+
+        if (subject_name_input.text == "")
+        {
+            warnings.Add("The subject's name is missing.");
+        }
+
+        if (subject_id_input.text == "")
+        {
+            warnings.Add("The subject's ID is missing.");
+        }
+
+        // ignore the warning for missing session number, it will be defaulted to 0
+
+        if (experimenter_name_input.text == "")
+        {
+            warnings.Add("The experimenter's name is missing.");
+        }
+
+        if (save_folder_input.text == "")
+        {
+            warnings.Add("The save folder location is missing.");
+        }
+
+        return warnings;
+    }
+
+    void WriteHeadersIfFilesNonexistent()
+    {
+        string folder_path = save_folder_input.text;
+
+        string raw_path = folder_path + "\\raw.csv";
+        // make raw.csv if not existing
+        if (!File.Exists(raw_path))
+        {
+            // write column names
+            string raw_column_names =
+                "ppid," +
+                "time," +
+                "system time," +
+                "distance," +
+                "gaze," +
+                "\n";
+            File.WriteAllText(raw_path, raw_column_names);
+        }
+
+        string average_path = folder_path + "\\average.csv";
+        // make averages.csv if not existing
+        if (!File.Exists(average_path))
+        {
+            // write column names
+            string average_column_names =
+                "ppid," +
+                "time," +
+                "system time," +
+                "moving average distance," +
+                "moving average gaze" +
+                "\n";
+            File.WriteAllText(average_path, average_column_names);
+        }
+
+        string results_path = folder_path + "\\results.csv";
+        // make results.csv if not existing
+        if (!File.Exists(results_path))
+        {
+            // write column names
+            string results_column_names =
+"subject name," +
+"subject ID," +
+"session," +
+"ppid," +
+"experimenter name," +
+"file path," +
+"trial number," +
+"start time," +
+"end time," +
+"model," +
+"skintone," +
+"session type," +
+"trial average distance," +
+"trial median distance," +
+"trial standard deviation distance," +
+"trial average gaze," +
+"trial median gaze," +
+"trial standard gaze distance," +
+"global average distance," +
+"global median distance," +
+"global standard deviation distance," +
+"global average gaze," +
+"global median gaze," +
+"global standard deviation gaze" +
+"\n";
+            File.WriteAllText(results_path, results_column_names);
+        }
+    }
+
+
+    void RecordData()
+    {
         // write to csv in order of
         // ppid, time, system time, distance, gaze
         string line_str = "";
 
         // ppid
-        // TODO: implement with user input screen
-        uint test_ppid = 123;
-        uint ppid = test_ppid;
+        string ppid = subject_id_input.text + "_" + subject_name_input.text;
         line_str += ppid + ",";
 
         // time
@@ -77,28 +301,37 @@ public class IO_Helper : MonoBehaviour
         line_str += "\n";
 
         // write a new line to file
-        File.AppendAllText(output_path, line_str);
+        string folder_path = save_folder_input.text;
+        string raw_path = folder_path + "\\raw.csv";
+        WriteToFile(raw_path, line_str);
+
     }
 
-        // [0, 1] value representing eye contact (0 for fully turned away, 1 for direct eye contact)
+    // [0, 1] linear value representing eye contact (0 for NPC isn't in the user's FOV, 1 for direct eye contact)
     private double GetGaze()
     {
         // vector3D that describes the vector between the player's camera and the NPC's head
-        Vector3 target_vector = target_obj.position - user_cam_position.position;
-        target_vector.Normalize();
+        Vector3 agentLocation = user_cam_position.position;
+        Vector3 subjectLocation = target_obj.position;
+        Vector3 directionVector = subjectLocation - agentLocation;
+        directionVector.Normalize();
 
-        // vector that describes the rotation of the camera
-        Vector3 rotation_vector = user_cam_orientation.forward;
-        rotation_vector.Normalize();
+        // Get the forward vector of the subject.
+        Vector3 subjectForwardVector = user_cam_orientation.forward;
 
-        // dot product is the eye contact value
-        // dot product has a range of [-1, 1]
-        double gaze = Vector3.Dot(target_vector, rotation_vector);
+        // Calculate the angle between the subject's forward vector and the direction vector.
+        float angleBetween = Vector3.Angle(subjectForwardVector, directionVector);
+        float halfFOV = FOV / 2f;
 
-        // turn into range of [0,1]
-        gaze = (gaze + 1) / 2;
-
-        return gaze;
+        // Determine gaze score based on the angle between the vectors
+        if (angleBetween >= halfFOV)
+        {
+            return 0.0f;
+        }
+        else
+        {
+            return 1.0f - (angleBetween / halfFOV);
+        }
     }
 
     private double GetDistance()

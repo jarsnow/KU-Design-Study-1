@@ -14,7 +14,7 @@ public class NPC_Walk_Test : MonoBehaviour
     void Start()
     {
         // don't move, so set walking to false and walking speed to zero
-        animator.SetBool(isWalking, false);
+        //animator.SetBool(isWalking, false);
         path_follower.m_Speed = 0;
     }
 

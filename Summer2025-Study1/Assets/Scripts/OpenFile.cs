@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class OpenFile : MonoBehaviour
 {
 
-    // attach to the input field of the one with the button (SaveFilePath
+    // attach to the input field of the one with the button (SaveFilePath)
     public TMP_InputField input;
 
     public void ButtonPressed()

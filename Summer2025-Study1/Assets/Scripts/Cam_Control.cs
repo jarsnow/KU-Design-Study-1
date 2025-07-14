@@ -8,6 +8,7 @@ public class Cam_Control : MonoBehaviour
     public float sens_y;
 
     public Transform orientation;
+    private bool isCameraLocked;
 
     float xRotation;
     float yRotation;
@@ -15,6 +16,7 @@ public class Cam_Control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isCameraLocked = false;
         // lock cursor to center of screen and hide it
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -23,6 +25,15 @@ public class Cam_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isCameraLocked = !isCameraLocked;
+        }
+
+        if (isCameraLocked)
+        {
+            return;
+        }
         // get distance to move cam
         float mouse_x = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens_x;
         float mouse_y = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens_y;
