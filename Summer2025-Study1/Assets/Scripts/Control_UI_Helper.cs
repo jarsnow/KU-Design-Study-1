@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,11 +13,13 @@ public class Control_UI_Helper : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject advance_trial_popup;
+    public GameObject save_and_exit_popup;
+
     private AnimatorOverrideController overrider;
 
     private GameObject last_anim_progress_fill_bar;
     private float last_anim_progress_amount;
-    public GameObject[] fill_bars;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +50,7 @@ public class Control_UI_Helper : MonoBehaviour
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Active Animation"))
         {
-            animator.CrossFadeInFixedTime("Active Animation", 0.1f);
+            animator.CrossFadeInFixedTime("Active Animation", 0.4f);
         }
     }
 
@@ -77,4 +80,27 @@ public class Control_UI_Helper : MonoBehaviour
         }
 
     }
+
+    public void AdvanceTrialPopupPressed()
+    {
+        advance_trial_popup.SetActive(false);
+    }
+    public void SaveAndExitPopupPressed(bool wasYesPressed)
+    {
+        save_and_exit_popup.SetActive(false);
+
+        if (wasYesPressed)
+        {
+            // quit when running the real thing
+            Application.Quit();
+            // quit when in play mode (editor)
+            EditorApplication.isPlaying = false;
+        }
+    }
+
+    public void ShowPopup(GameObject popup_to_show)
+    {
+        popup_to_show.SetActive(true);
+    }
+
 }

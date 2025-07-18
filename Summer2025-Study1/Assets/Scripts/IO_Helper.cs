@@ -28,27 +28,33 @@ public class IO_Helper : MonoBehaviour
     public GameObject canvas;
     public GameObject skintone_parent;
 
-    public GameObject session_info;
+    public TMP_Text trial_number_display;
+    public TMP_Text gaze_value_display;
+    public TMP_Text distance_value_display;
+
+    public GameObject control_ui;
+    public GameObject male_model;
+    public GameObject female_model;
 
     private string selected_model = "female";
-    private int selected_skintone = 0;
+    private UInt16 selected_skintone = 0;
 
     private DateTime start_time;
 
     private bool isExperimentStarted;
     // determines amount to round to for all files
-    private const int digits_to_round = 6;
+    private const UInt16 digits_to_round = 2;
 
     // FOV is actually different horizontally than vertically for the quest 3, maybe fix later if needed
-    private const int FOV = 110;
+    private const UInt16 FOV = 110;
 
-    // polling rate in seconds for recording Average.csv
-    // default is 60 seconds
-    private const float average_polling_rate = 60;
     private double moving_gaze_sum;
     private double moving_dist_sum;
 
     private DateTime last_poll_time;
+
+    private UInt16 current_trial_step = 0;
+    
 
     // similar to SkintoneButtonClicked
     public void ModelButtonClicked(GameObject button_parent)
@@ -74,7 +80,7 @@ public class IO_Helper : MonoBehaviour
     {
         string calling_button = button_parent.name;
         // 1: get the number attached to each (Color0, Color1)
-        selected_skintone = int.Parse(calling_button[5].ToString());
+        selected_skintone = UInt16.Parse(calling_button[5].ToString());
         // 2: disable all the selectedbackgrounds
         for (int i = 0; i <= 7; i++)
         {
@@ -92,23 +98,26 @@ public class IO_Helper : MonoBehaviour
     {
         // clear placeholder warning from the UI
         warning_text.text = "";
+        control_ui.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        updateControlUIStats();
         // only write when game has started
         if (isExperimentStarted)
         {
             RecordData();
-
-            updateControlUIStats(session_info);
         }
+
     }
 
-    void updateControlUIStats(GameObject session_info)
+    void updateControlUIStats()
     {
-        //GameObject trial_step_text = session_info.Find("TrialNumber");
+        trial_number_display.text = "Trial Step: " + current_trial_step;
+        gaze_value_display.text = "Gaze: " + GetGaze();
+        distance_value_display.text = "Distance: " + GetDistance();
     }
 
     // simply write to file
@@ -154,6 +163,7 @@ public class IO_Helper : MonoBehaviour
         // disable starting experiment UI
         // do not disable the UI as a whole because it needs to run the Update() function still
         canvas.SetActive(false);
+        control_ui.SetActive(true);
 
         // start recording data
         // record experiment starting time
@@ -162,6 +172,18 @@ public class IO_Helper : MonoBehaviour
 
         // create empty files
         WriteHeadersIfFilesNonexistent();
+
+        // turn on NPC models
+        if (selected_model == "female")
+        {
+            female_model.SetActive(true);
+            male_model.SetActive(false);
+        }
+        else
+        {
+            female_model.SetActive(false);
+            male_model.SetActive(true);
+        }
     }
 
     void CleanUIInput()
@@ -339,13 +361,18 @@ public class IO_Helper : MonoBehaviour
         }
         else
         {
-            return 1.0f - (angleBetween / halfFOV);
+            return Math.Round(1.0f - (angleBetween / halfFOV), digits_to_round);
         }
+    }
+
+    public void AdvanceTrial()
+    {
+        current_trial_step++;
     }
 
     private double GetDistance()
     {
         Vector3 dist_vector = target_obj.position - user_cam_position.position;
-        return (double) dist_vector.magnitude;
+        return (double) Math.Round(dist_vector.magnitude, digits_to_round);
     }
 }
