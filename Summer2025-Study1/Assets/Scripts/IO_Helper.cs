@@ -28,6 +28,8 @@ public class IO_Helper : MonoBehaviour
     public GameObject canvas;
     public GameObject skintone_parent;
 
+    public GameObject session_info;
+
     private string selected_model = "female";
     private int selected_skintone = 0;
 
@@ -99,7 +101,14 @@ public class IO_Helper : MonoBehaviour
         if (isExperimentStarted)
         {
             RecordData();
+
+            updateControlUIStats(session_info);
         }
+    }
+
+    void updateControlUIStats(GameObject session_info)
+    {
+        //GameObject trial_step_text = session_info.Find("TrialNumber");
     }
 
     // simply write to file

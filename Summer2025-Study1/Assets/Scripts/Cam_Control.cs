@@ -27,7 +27,7 @@ public class Cam_Control : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isCameraLocked = !isCameraLocked;
+            toggleCameraLock();
         }
 
         if (isCameraLocked)
@@ -49,5 +49,10 @@ public class Cam_Control : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
+    }
+
+    public void toggleCameraLock()
+    {
+        isCameraLocked = !isCameraLocked;
     }
 }
