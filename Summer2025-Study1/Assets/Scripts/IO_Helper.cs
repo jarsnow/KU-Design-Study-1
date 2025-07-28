@@ -36,6 +36,10 @@ public class IO_Helper : MonoBehaviour
     public GameObject male_model;
     public GameObject female_model;
 
+    public Material[] male_faces;
+    public Material[] female_faces;
+    public Material[] skintones;
+
     private string selected_model = "female";
     private UInt16 selected_skintone = 0;
 
@@ -113,6 +117,20 @@ public class IO_Helper : MonoBehaviour
 
     }
 
+    void updateModelSkintone(string selected_model, int skintone)
+    {
+        Debug.Log(selected_model);
+        Debug.Log(skintone);
+        Material face_material = (selected_model == "Male") ? male_faces[skintone] : female_faces[skintone];
+        Material skin_material = skintones[skintone];
+        GameObject target_model = (selected_model == "Male") ? male_model : female_model;
+
+        // set skin
+        target_model.transform.Find("Wolf3D_Body").GetComponent<SkinnedMeshRenderer>().material = skin_material;
+        // set face
+        target_model.transform.Find("Wolf3D_Head").GetComponent<SkinnedMeshRenderer>().material = face_material;
+    }
+
     void updateControlUIStats()
     {
         trial_number_display.text = "Trial Step: " + current_trial_step;
@@ -173,16 +191,24 @@ public class IO_Helper : MonoBehaviour
         // create empty files
         WriteHeadersIfFilesNonexistent();
 
+        string supportive_state = session_type_input.options[session_type_input.value].text.ToLower();
+        control_ui.GetComponent<Control_UI_Helper>().updateAnimationMenu(supportive_state);
+
+        updateModelSkintone(selected_model, selected_skintone);
+
         // turn on NPC models
         if (selected_model == "female")
         {
             female_model.SetActive(true);
             male_model.SetActive(false);
+            control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("female");
+            control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("female");
         }
         else
         {
             female_model.SetActive(false);
             male_model.SetActive(true);
+            control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("male");
         }
     }
 

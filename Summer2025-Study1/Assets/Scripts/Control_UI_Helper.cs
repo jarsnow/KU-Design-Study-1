@@ -11,10 +11,15 @@ public class Control_UI_Helper : MonoBehaviour
     public GameObject ControlUIBackground;
     public GameObject MinimizeButtonCheckmark;
 
-    public Animator animator;
+    private Animator animator;
+    public Animator female_animator;
+    public Animator male_animator;
 
     public GameObject advance_trial_popup;
     public GameObject save_and_exit_popup;
+
+    public GameObject supportive_anims;
+    public GameObject unsupportive_anims;
 
     private AnimatorOverrideController overrider;
 
@@ -24,6 +29,7 @@ public class Control_UI_Helper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = female_animator;
     }
 
     // Update is called once per frame
@@ -35,9 +41,29 @@ public class Control_UI_Helper : MonoBehaviour
         //last_clicked_progress_bar.localScale = new Vector3(anim_progress, 1, 1);
     }
 
-    public void recordFillBar(GameObject fill_bar)
+    public void updateActiveNPCModel(string npc_gender)
     {
-        last_anim_progress_fill_bar = fill_bar;
+        if (npc_gender == "female")
+        {
+            animator = female_animator;
+        } else
+        {
+            animator = male_animator;
+        }
+    }
+
+    public void updateAnimationMenu(string supportive_state)
+    {
+        if (supportive_state == "supportive")
+        {
+            supportive_anims.SetActive(true);
+            unsupportive_anims.SetActive(false);
+        }
+        else
+        {
+            supportive_anims.SetActive(false);
+            unsupportive_anims.SetActive(true);
+        }
     }
 
     public void StartOneshotAnimation(AnimationClip anim)
