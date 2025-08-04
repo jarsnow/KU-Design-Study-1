@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor.Experimental;
+using UnityEditor;
+using System.Linq;
 
 public class IO_Helper : MonoBehaviour
 {
@@ -44,6 +46,8 @@ public class IO_Helper : MonoBehaviour
     private UInt16 selected_skintone = 0;
 
     private DateTime start_time;
+    private DateTime trial_zero_start_time;
+    private DateTime last_trial_start_time;
 
     private bool isExperimentStarted;
     // determines amount to round to for all files
@@ -54,9 +58,23 @@ public class IO_Helper : MonoBehaviour
 
     private double moving_gaze_sum;
     private double moving_dist_sum;
+    private UInt16 moving_frames_recorded;
+
+    // trial averages, median for gaze / distance
+    private double trial_dist_sum;
+    private List<double> trial_dist_values = new List<double>();
+
+    private double trial_gaze_sum;
+    private List<double> trial_gaze_values = new List<double>();
+
+    // session averages, median for gaze / distance
+    private double session_dist_sum;
+    private List<double> session_dist_values = new List<double>();
+
+    private double session_gaze_sum;
+    private List<double> session_gaze_values = new List<double>();
 
     private DateTime last_poll_time;
-
     private UInt16 current_trial_step = 0;
     
 
@@ -109,18 +127,22 @@ public class IO_Helper : MonoBehaviour
     void Update()
     {
         updateControlUIStats();
-        // only write when game has started
-        if (isExperimentStarted)
+
+        // recording begins only after trial step 0
+        if (isExperimentStarted && current_trial_step > 0)
         {
             RecordData();
         }
 
+        // record data for trial zero
+        if (isExperimentStarted && current_trial_step == 0)
+        {
+            RecordTrialZeroData();
+        }
     }
 
     void updateModelSkintone(string selected_model, int skintone)
     {
-        Debug.Log(selected_model);
-        Debug.Log(skintone);
         Material face_material = (selected_model == "Male") ? male_faces[skintone] : female_faces[skintone];
         Material skin_material = skintones[skintone];
         GameObject target_model = (selected_model == "Male") ? male_model : female_model;
@@ -152,7 +174,6 @@ public class IO_Helper : MonoBehaviour
             {
                 Debug.Log("Data is not being recorded. Please close out of any programs with any of the .csv files open to continue recording data.");
             }
-            //Application.Quit();
         }
     }
 
@@ -183,10 +204,9 @@ public class IO_Helper : MonoBehaviour
         canvas.SetActive(false);
         control_ui.SetActive(true);
 
-        // start recording data
-        // record experiment starting time
-        start_time = System.DateTime.Now;
-        last_poll_time = start_time;
+        // record start time for trial zero
+        trial_zero_start_time = System.DateTime.Now;
+        last_trial_start_time = System.DateTime.Now;
 
         // create empty files
         WriteHeadersIfFilesNonexistent();
@@ -320,7 +340,8 @@ public class IO_Helper : MonoBehaviour
     }
 
 
-    void RecordData()
+
+    private void RecordData()
     {
         // write to csv in order of
         // ppid, time, system time, distance, gaze
@@ -362,6 +383,224 @@ public class IO_Helper : MonoBehaviour
         string raw_path = folder_path + "\\raw.csv";
         WriteToFile(raw_path, line_str);
 
+        // add values to averages
+        moving_dist_sum += dist;
+        moving_gaze_sum += gaze;
+        moving_frames_recorded++;
+
+        // trial info
+        trial_dist_sum += dist;
+        trial_dist_values.Add(dist);
+
+        trial_gaze_sum += gaze;
+        trial_gaze_values.Add(gaze);
+
+        // session info
+        session_dist_sum += dist;
+        session_dist_values.Add(dist);
+
+        session_gaze_sum += gaze;
+        session_gaze_values.Add(gaze);
+
+        TimeSpan time_passed_since_last_poll = System.DateTime.Now - last_poll_time;
+        if (time_passed_since_last_poll.TotalSeconds > 60)
+        {
+            RecordAverages();
+        }
+    }
+
+    // does not actually write anything to files
+    // data collection should only start after trial zero
+    private void RecordTrialZeroData()
+    {
+        double dist = GetDistance();
+        double gaze = GetGaze();
+
+        // trial info
+        trial_dist_sum += dist;
+        trial_dist_values.Add(dist);
+
+        trial_gaze_sum += gaze;
+        trial_gaze_values.Add(gaze);
+
+        // session info
+        session_dist_sum += dist;
+        session_dist_values.Add(dist);
+
+        session_gaze_sum += gaze;
+        session_gaze_values.Add(gaze);
+    }
+
+    // should record averages of distance and gaze every 60 seconds
+    private void RecordAverages()
+    {
+        // write to csv in order of
+        // ppid, time, system time, moving avg distance, moving avg gaze
+        string line_str = "";
+
+        // ppid
+        string ppid = subject_id_input.text + "_" + subject_name_input.text;
+        line_str += ppid + ",";
+
+        // time
+        // represents the time since the start of the session in seconds
+        TimeSpan time_diff = System.DateTime.Now - start_time;
+        double seconds_passed = (double) time_diff.TotalSeconds;
+        seconds_passed = Math.Round(seconds_passed, digits_to_round);
+        line_str += seconds_passed + ",";
+
+        // system time
+        // represents the current system time
+        string format = "HH:mm:ss";
+        string current_time = System.DateTime.Now.ToString(format);
+        line_str += current_time + ",";
+
+        // distance avg of the last 60 seconds
+        double distance_avg = Math.Round((double) moving_dist_sum / moving_frames_recorded, digits_to_round);
+        double gaze_avg = Math.Round((double) moving_gaze_sum / moving_frames_recorded, digits_to_round);
+
+        line_str += distance_avg.ToString() + ",";
+        line_str += gaze_avg.ToString() + "\n";
+
+        // write a new line to file
+        string folder_path = save_folder_input.text;
+        string average_path = folder_path + "\\average.csv";
+        WriteToFile(average_path, line_str);
+
+        // reset for next 60 seconds
+        moving_dist_sum = 0;
+        moving_gaze_sum = 0;
+        moving_frames_recorded = 0;
+        last_poll_time = System.DateTime.Now;
+    }
+
+    private void RecordTrialResults()
+    {
+        string line_str = "";
+        int trial_frames_recorded = trial_dist_values.Count();
+        int session_frames_recorded = session_dist_values.Count();
+
+        // subject name
+        string subject_name = subject_name_input.text;
+        line_str += subject_name + ",";
+
+        // subject id
+        string subject_id = subject_id_input.text;
+        line_str += subject_id + ",";
+
+        // session
+        string session_num = session_number_input.text;
+        line_str += session_num + ",";
+
+        // ppid
+        string ppid = subject_id_input.text + "_" + subject_name_input.text;
+        line_str += ppid + ",";
+
+        // experimenter name
+        string experimenter_name = experimenter_name_input.text;
+        line_str += experimenter_name + ",";
+
+        // file path
+        string file_path = save_folder_input.text;
+        line_str += file_path + ",";
+
+        // trial number
+        line_str += current_trial_step.ToString() + ",";
+
+        // start time
+        TimeSpan trial_start_time = last_trial_start_time - trial_zero_start_time;
+        string trial_start = Math.Round(trial_start_time.TotalSeconds, digits_to_round).ToString();
+        line_str += trial_start + ",";
+
+        // end time
+        TimeSpan time_since_session_start = System.DateTime.Now - trial_zero_start_time;
+        string time_since_start = Math.Round(time_since_session_start.TotalSeconds, digits_to_round).ToString();
+        line_str += time_since_start + ",";
+
+        // model
+        line_str += selected_model + ",";
+
+        // skintone
+        string skintone = selected_skintone.ToString();
+        line_str += skintone + ",";
+
+        // session type
+        string session_type = session_type_input.options[session_type_input.value].text.ToLower();
+        line_str += session_type + ",";
+
+        // trial average distance
+        double trial_average_distance = Math.Round(((double) trial_dist_sum / trial_frames_recorded), digits_to_round);
+        line_str += trial_average_distance.ToString() + ",";
+
+        // trial median distance
+        line_str += GetMedian(trial_dist_values).ToString() + ",";
+
+        // trial standard deviation distance
+        line_str += GetStandardDeviationWithAverage(trial_dist_values, trial_average_distance).ToString() + ",";
+
+        // trial average gaze
+        double trial_average_gaze = Math.Round(((double) trial_gaze_sum / trial_frames_recorded), digits_to_round);
+        line_str += trial_average_gaze.ToString() + ",";
+
+        // trial median gaze
+        line_str += GetMedian(trial_gaze_values).ToString() + ",";
+
+        // trial standard deviation gaze
+        line_str += GetStandardDeviationWithAverage(trial_gaze_values, trial_average_gaze).ToString() + ",";
+
+        // session average distance
+        double session_average_distance = Math.Round(((double) session_dist_sum / session_frames_recorded), digits_to_round);
+        line_str += session_average_distance.ToString() + ",";
+
+        // session median distance
+        line_str += GetMedian(session_dist_values).ToString() + ",";
+
+        // session standard deviation distance
+        line_str += GetStandardDeviationWithAverage(session_dist_values, session_average_distance).ToString() + ",";
+
+        // session average gaze
+        double session_average_gaze = Math.Round(((double) session_gaze_sum / session_frames_recorded), digits_to_round);
+        line_str += session_average_gaze.ToString() + ",";
+
+        // session median gaze
+        line_str += GetMedian(session_gaze_values).ToString() + ",";
+
+        // session standard deviation gaze
+        line_str += GetStandardDeviationWithAverage(session_gaze_values, session_average_gaze).ToString() + "\n";
+
+        // write a new line to file
+        string folder_path = save_folder_input.text;
+        string raw_path = folder_path + "\\results.csv";
+        WriteToFile(raw_path, line_str);
+
+        // reset for next trial
+        trial_dist_sum = 0;
+        trial_gaze_sum = 0;
+        trial_dist_values.Clear();
+        trial_gaze_values.Clear();
+    }
+
+    private double GetMedian(List<Double> values)
+    {
+        double result;
+        int count = values.Count();
+        if (count % 2 == 1)
+        {
+            result = values[count / 2];
+        } else
+        {
+            result = (values[(count / 2) - 1] + values[count / 2]) / 2;
+        }
+        return result;
+    }
+    private double GetStandardDeviationWithAverage(List<Double> values, double average)
+    {
+        double sum_of_squares = 0;
+        foreach (double val in values)
+        {
+            sum_of_squares += Math.Pow(val - average, 2);
+        }
+        return Math.Sqrt(sum_of_squares / values.Count());
     }
 
     // [0, 1] linear value representing eye contact (0 for NPC isn't in the user's FOV, 1 for direct eye contact)
@@ -393,7 +632,31 @@ public class IO_Helper : MonoBehaviour
 
     public void AdvanceTrial()
     {
+        RecordTrialResults();
+
+        // only do these when recording starts
+        if (current_trial_step == 0)
+        {
+            // record experiment starting time
+            start_time = System.DateTime.Now;
+            last_poll_time = start_time;
+        }
+
+        // NPC starts walking after trial step 1 (2 on the spec sheet)
+        if (current_trial_step == 1)
+        {
+            control_ui.GetComponent<Control_UI_Helper>().toggleWalking();
+        }
+
+        last_trial_start_time = System.DateTime.Now;
         current_trial_step++;
+    }
+
+    // record the remaining values for averages
+    // does results need to be recorded?
+    public void EndSession()
+    {
+        RecordAverages();
     }
 
     private double GetDistance()

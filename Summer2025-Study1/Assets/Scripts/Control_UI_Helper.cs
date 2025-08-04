@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -21,10 +22,13 @@ public class Control_UI_Helper : MonoBehaviour
     public GameObject supportive_anims;
     public GameObject unsupportive_anims;
 
-    private AnimatorOverrideController overrider;
+    public GameObject IO_Helper_obj;
 
-    private GameObject last_anim_progress_fill_bar;
-    private float last_anim_progress_amount;
+    public CinemachineDollyCart path_follower;
+    public CinemachinePath path;
+    private bool is_done_walking = false;
+
+    private AnimatorOverrideController overrider;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +39,21 @@ public class Control_UI_Helper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // code for animation progress
-        //float anim_progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        //RectTransform last_clicked_progress_bar = last_anim_progress_fill_bar.GetComponent<RectTransform>();
-        //last_clicked_progress_bar.localScale = new Vector3(anim_progress, 1, 1);
+        // check if the NPC needs to stop walking
+        float path_progress = path_follower.m_Position / path.PathLength;
+        if(path_progress >= .99999 && !is_done_walking)
+        {
+            is_done_walking = true;
+            toggleWalking();
+        }
+    }
+    public void toggleWalking()
+    {
+        // toggle animation
+        bool isCurrWalking = animator.GetBool("isWalking");
+        animator.SetBool("isWalking", !isCurrWalking);
+        // toggle speed to 0/1 (might seem odd because isCurrWalking was before it was toggled)
+        path_follower.m_Speed = isCurrWalking ? 0 : 1;
     }
 
     public void updateActiveNPCModel(string npc_gender)
@@ -117,6 +132,7 @@ public class Control_UI_Helper : MonoBehaviour
 
         if (wasYesPressed)
         {
+            IO_Helper_obj.GetComponent<IO_Helper>().EndSession();
             // quit when running the real thing
             Application.Quit();
             // quit when in play mode (editor)

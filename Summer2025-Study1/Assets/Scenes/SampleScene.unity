@@ -8083,6 +8083,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640140418}
   m_CullTransparentMesh: 1
+--- !u!1 &652754387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652754388}
+  m_Layer: 0
+  m_Name: VR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652754388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652754387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667592604
 GameObject:
   m_ObjectHideFlags: 0
@@ -10815,81 +10845,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904171495}
   m_CullTransparentMesh: 1
---- !u!1 &911014143
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 911014146}
-  - component: {fileID: 911014145}
-  - component: {fileID: 911014144}
-  m_Layer: 5
-  m_Name: SelectedBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &911014144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911014143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.6313726, g: 0.77254903, b: 0.9254902, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &911014145
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911014143}
-  m_CullTransparentMesh: 1
---- !u!224 &911014146
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911014143}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: 242.5}
-  m_SizeDelta: {x: 110, y: 110}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &911814729
 GameObject:
   m_ObjectHideFlags: 0
@@ -11202,7 +11157,6 @@ GameObject:
   m_Component:
   - component: {fileID: 922933029}
   - component: {fileID: 922933028}
-  - component: {fileID: 922933027}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -11210,20 +11164,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &922933027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922933026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b21922e8dd82d54d8fe479526cb7595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  path_follower: {fileID: 922933028}
 --- !u!114 &922933028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12976,6 +12916,9 @@ MonoBehaviour:
   save_and_exit_popup: {fileID: 1407445556}
   supportive_anims: {fileID: 473285011}
   unsupportive_anims: {fileID: 1393661993}
+  IO_Helper_obj: {fileID: 1601015163}
+  path_follower: {fileID: 922933028}
+  path: {fileID: 1463100393}
 --- !u!4 &1184956900
 Transform:
   m_ObjectHideFlags: 0
@@ -16037,11 +15980,11 @@ MonoBehaviour:
   - position: {x: -1.3468661, y: 0, z: 1.918552}
     tangent: {x: -1.6387308, y: 0, z: 2.793189}
     roll: 0
-  - position: {x: -4.9989715, y: 0, z: 9.154358}
-    tangent: {x: 0.84772253, y: -0.15130234, z: 1.1414232}
+  - position: {x: -4.508758, y: 0, z: 9.024767}
+    tangent: {x: 0.0015001297, y: -0.15130234, z: 1.6820459}
     roll: 0
-  - position: {x: -2.5376728, y: 0, z: 10.529001}
-    tangent: {x: 0.5752698, y: 0, z: -1.6758537}
+  - position: {x: -2.2660425, y: 0, z: 10.076511}
+    tangent: {x: 0.42012262, y: 0, z: -1.7660637}
     roll: 0
 --- !u!4 &1463100394
 Transform:
