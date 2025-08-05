@@ -118,6 +118,7 @@ public class IO_Helper : MonoBehaviour
 
     void Start()
     {
+        //Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         // clear placeholder warning from the UI
         warning_text.text = "";
         control_ui.SetActive(false);

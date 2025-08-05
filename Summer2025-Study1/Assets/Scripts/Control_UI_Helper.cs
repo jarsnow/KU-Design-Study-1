@@ -2,7 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -98,13 +98,13 @@ public class Control_UI_Helper : MonoBehaviour
     // in order to toggle the menu, move the whole UI downwards by the size of the background
     public void ToggleMenu(bool toggle_state)
     {
-
+        // canvas scale in both UI parents
+        float scale = 1.5f;
         int height = (int) ControlUIBackground.GetComponent<RectTransform>().rect.height;
-
         if (toggle_state)
         {
             // move UI down
-            Vector3 downwards_move = new Vector3(0, -height, 0);
+            Vector3 downwards_move = new Vector3(0, -height * scale, 0);
             ControlUI.transform.Translate(downwards_move);
 
             // set checkmark z rotation to 180 (upside down)
@@ -113,7 +113,7 @@ public class Control_UI_Helper : MonoBehaviour
         else
         {
             // move UI up
-            Vector3 upwards_move = new Vector3(0, height, 0);
+            Vector3 upwards_move = new Vector3(0, height * scale, 0);
             ControlUI.transform.Translate(upwards_move);
 
             // set checkmark z rotation to 0 (right-side up)
@@ -136,7 +136,7 @@ public class Control_UI_Helper : MonoBehaviour
             // quit when running the real thing
             Application.Quit();
             // quit when in play mode (editor)
-            EditorApplication.isPlaying = false;
+            //EditorApplication.isPlaying = false;
         }
     }
 
