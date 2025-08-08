@@ -12,8 +12,9 @@ public class Player_Movement : MonoBehaviour
     // player's head cam orientation
     public Transform orientation;
 
-    private float horizontalInput;
-    private float verticalInput;
+    private float xInput;
+    private float yInput;
+    private float vertical_input;
     private Vector3 moveDirection;
     private Rigidbody rb;
 
@@ -28,7 +29,6 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInput();
     }
 
     private void FixedUpdate()
@@ -39,20 +39,24 @@ public class Player_Movement : MonoBehaviour
     void MovePlayer()
     {
         // get a vector of what direction to move in
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        moveDirection = orientation.forward * yInput + orientation.right * xInput;
         // normalize direction vector, multiply by movement speed
         // apply the force to the rigid body
         rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
+
+        // vertical force
+        rb.AddForce(orientation.up.normalized * moveSpeed * vertical_input, ForceMode.Force);
     }
 
-    void GetInput()
+    void OnWalk(InputValue value)
     {
-        // get input
-        // (vertical is W/S)
-        // (horizontal is A/D)
+        xInput = value.Get<Vector2>()[0];
+        yInput = value.Get<Vector2>()[1];
+    }
 
-        //horizontalInput = Input.GetAxisRaw("Horizontal");
-        //verticalInput = Input.GetAxisRaw("Vertical");
+    void OnMoveVertically(InputValue value)
+    {
+        vertical_input = value.Get<float>();
     }
 
 }

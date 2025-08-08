@@ -127,16 +127,21 @@ public class IO_Helper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isExperimentStarted)
+        {
+            return;
+        }
+
         updateControlUIStats();
 
         // recording begins only after trial step 0
-        if (isExperimentStarted && current_trial_step > 0)
+        if (current_trial_step > 0)
         {
             RecordData();
         }
 
         // record data for trial zero
-        if (isExperimentStarted && current_trial_step == 0)
+        if (current_trial_step == 0)
         {
             RecordTrialZeroData();
         }
@@ -585,6 +590,12 @@ public class IO_Helper : MonoBehaviour
     {
         double result;
         int count = values.Count();
+
+        if (count == 0)
+        {
+            throw new Exception("tried to get median on an empty list");
+        }
+
         if (count % 2 == 1)
         {
             result = values[count / 2];
@@ -596,6 +607,11 @@ public class IO_Helper : MonoBehaviour
     }
     private double GetStandardDeviationWithAverage(List<Double> values, double average)
     {
+        if (values.Count() == 0)
+        {
+            throw new Exception("tried to get standard deviation on an empty list");
+        }
+
         double sum_of_squares = 0;
         foreach (double val in values)
         {

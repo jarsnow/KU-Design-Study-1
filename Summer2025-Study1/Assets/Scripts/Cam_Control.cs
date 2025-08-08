@@ -11,8 +11,6 @@ public class Cam_Control : MonoBehaviour
     public Transform orientation;
     private bool isCameraLocked;
 
-    public InputAction escape_control;
-
     float xRotation;
     float yRotation;
 
@@ -25,18 +23,6 @@ public class Cam_Control : MonoBehaviour
         //Cursor.visible = false;
     }
 
-    // needed for InputAction handling
-    private void OnEnable()
-    {
-        escape_control.Enable();
-    }
-
-    // needed for InputAction handling
-    private void OnDisable()
-    {
-        escape_control.Disable();
-    }
-
     void OnCameraMove(InputValue value)
     {
         if (isCameraLocked)
@@ -46,9 +32,6 @@ public class Cam_Control : MonoBehaviour
         // get distance to move cam
         float mouse_x = value.Get<Vector2>()[0] * (float) 0.01;
         float mouse_y = value.Get<Vector2>()[1] * (float)0.01;
-
-        Debug.Log(xRotation);
-        Debug.Log(yRotation);
 
         // this might look dumb but it works
         yRotation += mouse_x;
@@ -77,5 +60,12 @@ public class Cam_Control : MonoBehaviour
     public void toggleCameraLock()
     {
         isCameraLocked = !isCameraLocked;
+    }
+
+    // needed for interfacing with Input System
+    public void OnToggleLock(InputAction.CallbackContext context)
+    {
+        Debug.Log("escape pressed");
+        toggleCameraLock();
     }
 }
