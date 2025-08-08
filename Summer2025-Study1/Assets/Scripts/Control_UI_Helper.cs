@@ -30,6 +30,8 @@ public class Control_UI_Helper : MonoBehaviour
 
     private AnimatorOverrideController overrider;
 
+    private bool isMenuMinimized = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,13 +97,19 @@ public class Control_UI_Helper : MonoBehaviour
         }
     }
 
+    // function referenced by input action system
+    void OnToggleMenu()
+    {
+        ToggleMenu();
+    }
+
     // in order to toggle the menu, move the whole UI downwards by the size of the background
-    public void ToggleMenu(bool toggle_state)
+    public void ToggleMenu()
     {
         // canvas scale in both UI parents
         float scale = 1.5f;
         int height = (int) ControlUIBackground.GetComponent<RectTransform>().rect.height;
-        if (toggle_state)
+        if (!isMenuMinimized)
         {
             // move UI down
             Vector3 downwards_move = new Vector3(0, -height * scale, 0);
@@ -120,6 +128,7 @@ public class Control_UI_Helper : MonoBehaviour
             MinimizeButtonCheckmark.transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
+        isMenuMinimized = !isMenuMinimized;
     }
 
     public void AdvanceTrialPopupPressed()

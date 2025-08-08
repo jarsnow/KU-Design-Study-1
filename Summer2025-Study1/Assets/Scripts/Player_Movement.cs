@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -11,11 +12,10 @@ public class Player_Movement : MonoBehaviour
     // player's head cam orientation
     public Transform orientation;
 
-    float horizontalInput;
-    float verticalInput;
-    Vector3 moveDirection;
-    Rigidbody rb;
-
+    private float horizontalInput;
+    private float verticalInput;
+    private Vector3 moveDirection;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -50,8 +50,9 @@ public class Player_Movement : MonoBehaviour
         // get input
         // (vertical is W/S)
         // (horizontal is A/D)
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+
+        //horizontalInput = Input.GetAxisRaw("Horizontal");
+        //verticalInput = Input.GetAxisRaw("Vertical");
     }
 
 }

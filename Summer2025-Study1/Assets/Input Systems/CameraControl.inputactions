@@ -1,0 +1,33 @@
+{
+    "name": "CameraControl",
+    "maps": [
+        {
+            "name": "Cam",
+            "id": "ba67e51e-4e16-4b32-b48d-7c6322ef9ca5",
+            "actions": [
+                {
+                    "name": "CameraMove",
+                    "type": "Value",
+                    "id": "1a6a6f33-56e5-4d07-881c-6df4d57a59dd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1d16db6b-15b6-4d28-b332-c3f05af5ac43",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
