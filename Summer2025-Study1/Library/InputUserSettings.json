@@ -1,5 +1,5 @@
 {
-    "lockInputToGameView": false,
+    "lockInputToGameView": true,
     "addDevicesNotSupportedByProject": false,
     "autoSaveInputActionAssets": true,
     "simulateTouch": false
