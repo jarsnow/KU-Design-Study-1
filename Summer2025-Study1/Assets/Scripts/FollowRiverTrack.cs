@@ -8,10 +8,10 @@ namespace Cinemachine
     public class FollowRiverTrack : MonoBehaviour
     {
 
-        public CinemachinePath path;
+        public CinemachineSmoothPath path;
         public GameObject vr_cam;
 
-        private CInemachinePath.PositionUnits position_units = CinemachinePath.PositionUnits.PathUnits;
+        private CinemachineSmoothPath.PositionUnits position_units = CinemachineSmoothPath.PositionUnits.PathUnits;
         
         // Start is called before the first frame update
         void Start()
