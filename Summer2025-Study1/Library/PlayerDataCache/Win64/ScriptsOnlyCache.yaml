@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - IO_Helper
     - OpenFile
     - Player_Movement
+    - XR_UI_Helper
     Cinemachine.dll:
     - Cinemachine.CinemachineDollyCart
     - Cinemachine.CinemachinePath
@@ -53,6 +54,7 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
     - UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
     - UnityEngine.XR.OpenXR.OpenXRLoader
+    - UnityEngine.XR.OpenXR.OpenXRRestarter
     - UnityEngine.XR.OpenXR.OpenXRSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -125,71 +127,73 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1760}
     - Class: 114
-      Script: {instanceID: 1620}
+      Script: {instanceID: 1806}
     - Class: 114
-      Script: {instanceID: 1624}
+      Script: {instanceID: 1810}
     - Class: 114
-      Script: {instanceID: 1638}
+      Script: {instanceID: 1824}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1846}
     - Class: 114
-      Script: {instanceID: 1756}
+      Script: {instanceID: 1942}
     - Class: 114
-      Script: {instanceID: 1776}
+      Script: {instanceID: 1962}
     - Class: 114
-      Script: {instanceID: 1960}
+      Script: {instanceID: 2146}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 2200}
     - Class: 114
-      Script: {instanceID: 2218}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 2460}
     - Class: 114
-      Script: {instanceID: 2350}
+      Script: {instanceID: 2534}
     - Class: 114
-      Script: {instanceID: 2718}
+      Script: {instanceID: 2902}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2952}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 3120}
     - Class: 114
-      Script: {instanceID: 2948}
+      Script: {instanceID: 3132}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3022}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3162}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3430}
+      Script: {instanceID: 3614}
     - Class: 114
-      Script: {instanceID: 3546}
+      Script: {instanceID: 3730}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 4076}
     - Class: 114
-      Script: {instanceID: 3984}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 4390}
+      Script: {instanceID: 4568}
     - Class: 114
-      Script: {instanceID: 4592}
+      Script: {instanceID: 4770}
     - Class: 114
-      Script: {instanceID: 4768}
+      Script: {instanceID: 4946}
     - Class: 114
-      Script: {instanceID: 4828}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 4932}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 4960}
+      Script: {instanceID: 5112}
     - Class: 114
-      Script: {instanceID: 5114}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5306}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 5334}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5336}
+      Script: {instanceID: 5512}
+    - Class: 114
+      Script: {instanceID: 5514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -453,7 +457,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: 187ef1a2992af7fe206154a65e02efd9
+      Hash: 9be9d0196d06263c24c90b3ad8605dd9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IO_Helper
@@ -1057,6 +1061,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: Cinemachine3rdPersonAim
+  - hash:
+      serializedVersion: 2
+      Hash: 4c85b466613c67c54fbb2181841c77dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: XR_UI_Helper
   - hash:
       serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d

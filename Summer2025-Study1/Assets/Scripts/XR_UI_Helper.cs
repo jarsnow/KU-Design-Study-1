@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class XR_UI_Helper : MonoBehaviour
@@ -23,7 +24,7 @@ public class XR_UI_Helper : MonoBehaviour
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
     {
-        int panel_index = trialNumber - 1;
+       int panel_index = trialNumber;
         
         foreach  (GameObject panel in panels)
         {
@@ -35,5 +36,13 @@ public class XR_UI_Helper : MonoBehaviour
         selected_panel.SetActive(true);
         selected_panel.transform.position = xr_target_panel_transform.position;
         selected_panel.transform.LookAt(xr_camera_transform);
+
+        // canvases are backwards so rotate 180
+        selected_panel.transform.Rotate(0, 180, 0);
+    }
+
+    void OnToggleMenu()
+    {
+        Debug.Log("hello");
     }
 }

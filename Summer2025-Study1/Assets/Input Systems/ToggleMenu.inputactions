@@ -18,7 +18,7 @@
                 {
                     "name": "",
                     "id": "bac347b3-c4de-4d8f-98f0-fcbc09604669",
-                    "path": "<XRController>{RightHand}/primaryButton",
+                    "path": "<OculusTouchController>/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -29,7 +29,7 @@
                 {
                     "name": "",
                     "id": "f9a03050-af4b-4991-871f-f9077a35c2bc",
-                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "path": "<OculusTouchController>/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -40,7 +40,7 @@
                 {
                     "name": "",
                     "id": "0a35e998-860e-4317-8111-5064307aeea5",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<OculusTouchController>/thumbstickTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
