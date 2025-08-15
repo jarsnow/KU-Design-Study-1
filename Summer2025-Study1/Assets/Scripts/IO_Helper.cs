@@ -12,6 +12,8 @@ using System.Linq;
 
 public class IO_Helper : MonoBehaviour
 {
+    public GameObject XRUI;
+
     // assign these two to what it says
     public Transform user_cam_position;
     public Transform user_cam_orientation;
@@ -650,6 +652,8 @@ public class IO_Helper : MonoBehaviour
     public void AdvanceTrial()
     {
         RecordTrialResults();
+
+        XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
 
         // only do these when recording starts
         if (current_trial_step == 0)
