@@ -3,7 +3,12 @@ guid: def919da1999e44458b718e251042411
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cliff start_texture
+    second: {fileID: 2100000, guid: 4e5ced551762a4556afe60d87f7ccbd3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

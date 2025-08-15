@@ -3,7 +3,12 @@ guid: ddd4d85fbc3ae4c4590f942f240d0799
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_rock_texture
+    second: {fileID: 2100000, guid: 41d4a854c1c6843c0baf6c1e0944a580, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
