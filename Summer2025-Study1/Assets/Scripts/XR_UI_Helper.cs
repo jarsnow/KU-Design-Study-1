@@ -6,20 +6,22 @@ using UnityEngine.InputSystem;
 
 public class XR_UI_Helper : MonoBehaviour
 {
+    public GameObject XR_UI;
     public Transform xr_target_panel_transform;
     public Transform xr_camera_transform;
     public GameObject[] panels;
+    public Collider[] box_colliders;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //XR_UI.GetComponent<LookAtSquare>().SetNewMenuCollider(box_colliders[0]);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateMenuCloseButton();
     }
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
@@ -41,8 +43,9 @@ public class XR_UI_Helper : MonoBehaviour
         selected_panel.transform.Rotate(0, 180, 0);
     }
 
-    void OnToggleMenu()
+    private void UpdateMenuCloseButton()
     {
-        Debug.Log("hello");
+        //Debug.Log(XR_UI.GetComponent<LookAtSquare>().GetLookingProgress());
     }
+
 }
