@@ -653,8 +653,6 @@ public class IO_Helper : MonoBehaviour
     {
         RecordTrialResults();
 
-        XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
-
         // only do these when recording starts
         if (current_trial_step == 0)
         {
@@ -671,6 +669,8 @@ public class IO_Helper : MonoBehaviour
 
         last_trial_start_time = System.DateTime.Now;
         current_trial_step++;
+
+        XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
     }
 
     // record the remaining values for averages

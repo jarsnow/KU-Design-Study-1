@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 
 public class XR_UI_Helper : MonoBehaviour
@@ -10,7 +12,8 @@ public class XR_UI_Helper : MonoBehaviour
     public Transform xr_target_panel_transform;
     public Transform xr_camera_transform;
     public GameObject[] panels;
-    public Collider[] menu_colliders;
+
+    private int current_panel_index = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +29,10 @@ public class XR_UI_Helper : MonoBehaviour
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
     {
-       int panel_index = trialNumber;
-        
-        foreach  (GameObject panel in panels)
-        {
-            panel.SetActive(false);
-        }
+        current_panel_index = trialNumber;
 
-        GameObject selected_panel = panels[panel_index];
+        CloseAllPanels();
+        GameObject selected_panel = panels[current_panel_index];
 
         selected_panel.SetActive(true);
         selected_panel.transform.position = xr_target_panel_transform.position;
@@ -45,9 +44,26 @@ public class XR_UI_Helper : MonoBehaviour
 
     private void UpdateMenuCloseButton()
     {
-        float progress = XR_UI.GetComponent<LookAtSquare>().GetLookingProgress();
+        float progress = (float) XR_UI.GetComponent<LookAtSquare>().GetLookingProgress();
 
-        // get image
+        // update ring overlay that displays progress
+        GameObject selected_panel = panels[current_panel_index];
+        GameObject outline_image = selected_panel.transform.Find("MenuExitArea/Canvas/OutlineImage").gameObject;
+        outline_image.GetComponent<Image>().fillAmount = progress;
+
+        if (progress == 1)
+        {
+            CloseAllPanels();
+        }
+
+    }
+
+    private void CloseAllPanels()
+    {
+        foreach  (GameObject panel in panels)
+        {
+            panel.SetActive(false);
+        }
     }
 
 }

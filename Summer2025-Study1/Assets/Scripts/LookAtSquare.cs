@@ -25,7 +25,6 @@ public class LookAtSquare : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(is_user_looking_at_box);
         if (last_update_time == DateTime.MinValue)
         {
             last_update_time = DateTime.Now;
