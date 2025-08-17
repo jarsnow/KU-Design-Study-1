@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class LookAtSquare : MonoBehaviour
 {
-    public BoxCollider box_collider;
-    public CapsuleCollider XR_cylinder_collider;
+    public CapsuleCollider XR_sight_line;
+    private CapsuleCollider menu_collider;
 
     private TimeSpan looking_progress_time;
     private TimeSpan time_needed_to_close_menu = TimeSpan.FromSeconds(3);
 
     private DateTime last_update_time = DateTime.MinValue;
+
+    private bool is_user_looking_at_box;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,8 @@ public class LookAtSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(is_user_looking_at_box);
         if (last_update_time == DateTime.MinValue)
         {
             last_update_time = DateTime.Now;
@@ -30,7 +34,7 @@ public class LookAtSquare : MonoBehaviour
 
         TimeSpan time_since_last_update = DateTime.Now - last_update_time;
 
-        if (IsUserLookingAtBox())
+        if (is_user_looking_at_box)
         {
             looking_progress_time += time_since_last_update;
             if (looking_progress_time > time_needed_to_close_menu)
@@ -50,17 +54,15 @@ public class LookAtSquare : MonoBehaviour
         last_update_time = DateTime.Now;
     }
 
-    private bool IsUserLookingAtBox()
+    public void SetUserLookingAtBox(bool val)
     {
-        Debug.Log((box_collider.bounds.Intersects(XR_cylinder_collider.bounds)));
-
-        return false;
+        is_user_looking_at_box = val;
     }
 
-    public void SetNewMenuCollider(BoxCollider new_box)
+    public void SetNewMenuCollider(CapsuleCollider new_box)
     {
         ResetProgress();
-        box_collider = new_box;
+        menu_collider = new_box;
     }
 
     public double GetLookingProgress()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VisionTrigger : MonoBehaviour
 {
+    public GameObject XRUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,25 @@ public class VisionTrigger : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("VRSightLine")){
+            return;
+        }
+
+        XRUI.GetComponent<LookAtSquare>().SetUserLookingAtBox(true);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("VRSightLine")){
+            return;
+        }
+
+        XRUI.GetComponent<LookAtSquare>().SetUserLookingAtBox(false);
+    }
+
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("in the cylinder");
     }
 }

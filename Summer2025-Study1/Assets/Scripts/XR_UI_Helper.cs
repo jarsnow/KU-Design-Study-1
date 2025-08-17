@@ -10,7 +10,7 @@ public class XR_UI_Helper : MonoBehaviour
     public Transform xr_target_panel_transform;
     public Transform xr_camera_transform;
     public GameObject[] panels;
-    public Collider[] box_colliders;
+    public Collider[] menu_colliders;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,9 @@ public class XR_UI_Helper : MonoBehaviour
 
     private void UpdateMenuCloseButton()
     {
-        //Debug.Log(XR_UI.GetComponent<LookAtSquare>().GetLookingProgress());
+        float progress = XR_UI.GetComponent<LookAtSquare>().GetLookingProgress();
+
+        // get image
     }
 
 }
