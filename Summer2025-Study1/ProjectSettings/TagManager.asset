@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - VRSightLine
+  - VRHead
   layers:
   - Default
   - TransparentFX

@@ -77,8 +77,7 @@ public class IO_Helper : MonoBehaviour
     private List<double> session_gaze_values = new List<double>();
 
     private DateTime last_poll_time;
-    private UInt16 current_trial_step = 0;
-    
+    public UInt16 current_trial_step = 1;
 
     // similar to SkintoneButtonClicked
     public void ModelButtonClicked(GameObject button_parent)
@@ -136,17 +135,17 @@ public class IO_Helper : MonoBehaviour
 
         updateControlUIStats();
 
-        // recording begins only after trial step 0
-        if (current_trial_step > 0)
+        // recording begins only during trial step 2 and above
+        if (current_trial_step >= 2)
         {
             RecordData();
         }
 
-        // record data for trial zero
-        if (current_trial_step == 0)
-        {
-            RecordTrialZeroData();
-        }
+        // record data for trial one (unnecessary?)
+        //if (current_trial_step == 1)
+        //{
+        //    RecordTrialOneData();
+        //}
     }
 
     void updateModelSkintone(string selected_model, int skintone)
@@ -419,7 +418,7 @@ public class IO_Helper : MonoBehaviour
 
     // does not actually write anything to files
     // data collection should only start after trial zero
-    private void RecordTrialZeroData()
+    private void RecordTrialOneData()
     {
         double dist = GetDistance();
         double gaze = GetGaze();
@@ -651,18 +650,21 @@ public class IO_Helper : MonoBehaviour
 
     public void AdvanceTrial()
     {
-        RecordTrialResults();
+        if (current_trial_step >= 2)
+        {
+            RecordTrialResults();
+        }
 
         // only do these when recording starts
-        if (current_trial_step == 0)
+        if (current_trial_step == 1)
         {
             // record experiment starting time
             start_time = System.DateTime.Now;
             last_poll_time = start_time;
         }
 
-        // NPC starts walking after trial step 1 (2 on the spec sheet)
-        if (current_trial_step == 1)
+        // NPC starts walking after trial step 2
+        if (current_trial_step == 2)
         {
             control_ui.GetComponent<Control_UI_Helper>().toggleWalking();
         }
@@ -671,6 +673,11 @@ public class IO_Helper : MonoBehaviour
         current_trial_step++;
 
         XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
+    }
+
+    private void DisableTrialStepButtonIfNeeded()
+    {
+
     }
 
     // record the remaining values for averages

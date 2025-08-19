@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class XR_UI_Helper : MonoBehaviour
 {
     public GameObject XR_UI;
+    public Transform UI_target_pivot_point;
     public Transform xr_target_panel_transform;
     public Transform xr_camera_transform;
     public GameObject[] panels;
@@ -35,6 +36,11 @@ public class XR_UI_Helper : MonoBehaviour
         GameObject selected_panel = panels[current_panel_index];
 
         selected_panel.SetActive(true);
+
+        // test to make sure the panel appears horizontal when the user is looking up/down and next trial step occurs
+        Quaternion pivot_global_rotation = UI_target_pivot_point.rotation;
+        UI_target_pivot_point.rotation = Quaternion.Euler(0, pivot_global_rotation.y, pivot_global_rotation.z);
+
         selected_panel.transform.position = xr_target_panel_transform.position;
         selected_panel.transform.LookAt(xr_camera_transform);
 
