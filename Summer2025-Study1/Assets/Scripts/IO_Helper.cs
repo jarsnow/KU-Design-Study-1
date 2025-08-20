@@ -673,6 +673,7 @@ public class IO_Helper : MonoBehaviour
         current_trial_step++;
 
         XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
+        GetComponent<TrialTriggerManager>().UpdateTrialStepControlUIFromTrialStep(current_trial_step);
     }
 
     private void DisableTrialStepButtonIfNeeded()
