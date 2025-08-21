@@ -38,9 +38,10 @@ public class XR_UI_Helper : MonoBehaviour
         selected_panel.SetActive(true);
 
         // test to make sure the panel appears horizontal when the user is looking up/down and next trial step occurs
-        Quaternion pivot_global_rotation = UI_target_pivot_point.rotation;
-        UI_target_pivot_point.rotation = Quaternion.Euler(0, pivot_global_rotation.y, pivot_global_rotation.z);
-
+        Vector3 new_angles = UI_target_pivot_point.eulerAngles;
+        new_angles.x = 0;
+        UI_target_pivot_point.eulerAngles = new_angles;
+       
         selected_panel.transform.position = xr_target_panel_transform.position;
         selected_panel.transform.LookAt(xr_camera_transform);
 
