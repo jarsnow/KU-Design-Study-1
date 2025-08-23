@@ -3,11 +3,17 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Cam_Control
     - Cam_Follow
+    - CloseToAgentTrigger
     - Control_UI_Helper
     - Disable_Mirroring
+    - EndOfBridgeTrigger
     - IO_Helper
+    - LookAtSquare
     - OpenFile
     - Player_Movement
+    - StartOfBridgeTrigger
+    - TrialTriggerManager
+    - VisionTrigger
     - XR_UI_Helper
     Cinemachine.dll:
     - Cinemachine.CinemachineDollyCart
@@ -35,8 +41,6 @@ ScriptsOnlyBuild:
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
-    Unity.XR.Oculus.dll:
-    - Unity.XR.Oculus.OculusSettings
     Unity.XR.OpenXR.Editor.dll:
     - UnityEditor.XR.OpenXR.OpenXRPackageSettings
     Unity.XR.OpenXR.Features.ConformanceAutomation.dll:
@@ -54,7 +58,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
     - UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
     - UnityEngine.XR.OpenXR.OpenXRLoader
-    - UnityEngine.XR.OpenXR.OpenXRRestarter
     - UnityEngine.XR.OpenXR.OpenXRSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -106,6 +109,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -127,73 +132,85 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 1806}
+      Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 1624}
     - Class: 114
-      Script: {instanceID: 1824}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1846}
+      Script: {instanceID: 1660}
     - Class: 114
-      Script: {instanceID: 1942}
+      Script: {instanceID: 1756}
     - Class: 114
-      Script: {instanceID: 1962}
+      Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2146}
+      Script: {instanceID: 1960}
     - Class: 114
-      Script: {instanceID: 2200}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 2402}
+      Script: {instanceID: 2016}
     - Class: 114
-      Script: {instanceID: 2460}
+      Script: {instanceID: 2220}
     - Class: 114
-      Script: {instanceID: 2534}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2902}
+      Script: {instanceID: 2352}
+    - Class: 114
+      Script: {instanceID: 2720}
+    - Class: 114
+      Script: {instanceID: 2770}
+    - Class: 114
+      Script: {instanceID: 2774}
+    - Class: 114
+      Script: {instanceID: 2940}
     - Class: 114
       Script: {instanceID: 2952}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3132}
+      Script: {instanceID: 3026}
     - Class: 114
-      Script: {instanceID: 3174}
+      Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3436}
     - Class: 114
-      Script: {instanceID: 3614}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 3730}
+      Script: {instanceID: 3900}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4166}
+      Script: {instanceID: 4052}
     - Class: 114
-      Script: {instanceID: 4568}
+      Script: {instanceID: 4364}
     - Class: 114
-      Script: {instanceID: 4770}
+      Script: {instanceID: 4400}
+    - Class: 114
+      Script: {instanceID: 4602}
+    - Class: 114
+      Script: {instanceID: 4778}
+    - Class: 114
+      Script: {instanceID: 4838}
+    - Class: 114
+      Script: {instanceID: 4938}
+    - Class: 114
+      Script: {instanceID: 4940}
     - Class: 114
       Script: {instanceID: 4946}
     - Class: 114
-      Script: {instanceID: 5006}
+      Script: {instanceID: 4974}
     - Class: 114
-      Script: {instanceID: 5106}
+      Script: {instanceID: 5128}
     - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5140}
+      Script: {instanceID: 5348}
     - Class: 114
-      Script: {instanceID: 5294}
-    - Class: 114
-      Script: {instanceID: 5484}
-    - Class: 114
-      Script: {instanceID: 5512}
-    - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -361,6 +378,12 @@ ScriptsOnlyBuild:
     className: CinemachineCameraOffset
   - hash:
       serializedVersion: 2
+      Hash: 6fc96b0b200d3e234f6533b51b7452ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LookAtSquare
+  - hash:
+      serializedVersion: 2
       Hash: fab79fd4aa2ee3a43454bd2057bd797e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -457,7 +480,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: 9be9d0196d06263c24c90b3ad8605dd9
+      Hash: e827ab4f9e9cfaed170c7b6f849bb50a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IO_Helper
@@ -473,6 +496,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: fb6e7676743d9e36863d98f38b04476f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TrialTriggerManager
   - hash:
       serializedVersion: 2
       Hash: df21ffd1864551a3e43410f28754a73e
@@ -557,6 +586,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: f3fca56beca476ab7b2aada380a4c7c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VisionTrigger
   - hash:
       serializedVersion: 2
       Hash: ea41fa959037983f32ebd7c70de46554
@@ -823,6 +858,12 @@ ScriptsOnlyBuild:
     className: CinemachineFixedSignal
   - hash:
       serializedVersion: 2
+      Hash: 6cef0e40f2a664dce59534ab5ac64997
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CloseToAgentTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 611bc970ee9dc090779a3fac6a18fac6
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -917,6 +958,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: InputSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 6cef0e40f2a664dce59534ab5ac64997
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartOfBridgeTrigger
   - hash:
       serializedVersion: 2
       Hash: 295852e83016219fe0ab9a38fc36f74a
@@ -1063,7 +1110,13 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonAim
   - hash:
       serializedVersion: 2
-      Hash: 4c85b466613c67c54fbb2181841c77dd
+      Hash: 6cef0e40f2a664dce59534ab5ac64997
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndOfBridgeTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: c678c3386535e88aa7570d8d728ef1c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: XR_UI_Helper
