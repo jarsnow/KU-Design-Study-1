@@ -5,7 +5,8 @@ using UnityEngine;
 public class ResetVRPosition : MonoBehaviour
 {
     public Transform starting_transform;
-    public GameObject xr_rig;
+    public Transform xr_rig;
+    public Transform xr_camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,13 @@ public class ResetVRPosition : MonoBehaviour
 
     public void ResetPos()
     {
-        xr_rig.transform.position = starting_transform.position;
-        xr_rig.transform.rotation = starting_transform.rotation;
+        Debug.Log(starting_transform.position);
+        Debug.Log(xr_camera.position);
+        xr_rig.localPosition = starting_transform.position - xr_camera.localPosition;
+        Debug.Log(xr_rig.position);
+        xr_rig.position = new Vector3(xr_rig.position.x, 0, xr_rig.position.z);
+        Debug.Log(xr_rig.position);
+        //xr_rig.rotation = Quaternion.Inverse(starting_transform.rotation) * xr_camera.rotation;
+        //xr_rig.eulerAngles = new Vector3(0, xr_rig.eulerAngles.y, 0);
     }
 }
