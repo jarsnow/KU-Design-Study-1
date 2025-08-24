@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 //using Unity.PlasticSCM.Editor.WebApi;
@@ -13,19 +14,34 @@ public class XR_UI_Helper : MonoBehaviour
     public Transform xr_target_panel_transform;
     public Transform xr_camera_transform;
     public GameObject[] panels;
+    public Control_UI_Helper Control_UI_Helper;
+    public IO_Helper IO_Helper;
 
     private int current_panel_index = 0;
+    private bool next_panel_close_walks_agent = false;
+
+    private TimeSpan time_after_panel_closing_to_walk_agent = TimeSpan.FromSeconds(3);
+    private DateTime time_start = DateTime.MaxValue;
 
     // Start is called before the first frame update
     void Start()
     {
-        //XR_UI.GetComponent<LookAtSquare>().SetNewMenuCollider(box_colliders[0]);
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateMenuCloseButton();
+
+        if (DateTime.Now - time_start > time_after_panel_closing_to_walk_agent)
+        {
+            // start walking, advance trial step
+            Control_UI_Helper.toggleWalking();
+            IO_Helper.AdvanceTrial();
+
+            // disable
+            time_start = DateTime.MaxValue;
+        }
     }
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
@@ -49,14 +65,26 @@ public class XR_UI_Helper : MonoBehaviour
         selected_panel.transform.Rotate(0, 180, 0);
     }
 
+    public void SetNextPanelCloseToWalkAgent()
+    {
+        next_panel_close_walks_agent = true;
+    }
+
     private void UpdateMenuCloseButton()
     {
         float progress = (float) XR_UI.GetComponent<LookAtSquare>().GetLookingProgress();
 
         // update ring overlay that displays progress
         GameObject selected_panel = panels[current_panel_index];
-        GameObject outline_image = selected_panel.transform.Find("MenuExitArea/Canvas/OutlineImage").gameObject;
-        outline_image.GetComponent<Image>().fillAmount = progress;
+        GameObject outline_image;
+
+        try
+        {
+            outline_image = selected_panel.transform.Find("MenuExitArea/Canvas/OutlineImage").gameObject;
+            outline_image.GetComponent<Image>().fillAmount = progress;
+        } catch (NullReferenceException e){
+            // do nothing, there is one popup that is empty
+        }
 
         if (progress == 1)
         {
@@ -67,9 +95,16 @@ public class XR_UI_Helper : MonoBehaviour
 
     private void CloseAllPanels()
     {
-        foreach  (GameObject panel in panels)
+        XR_UI.GetComponent<LookAtSquare>().ResetProgress();
+        foreach (GameObject panel in panels)
         {
             panel.SetActive(false);
+        }
+
+        if (next_panel_close_walks_agent)
+        {
+            time_start = DateTime.Now;
+            next_panel_close_walks_agent = false;
         }
     }
 

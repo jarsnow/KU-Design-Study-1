@@ -47,6 +47,8 @@ public class Control_UI_Helper : MonoBehaviour
         {
             is_done_walking = true;
             toggleWalking();
+            // advance trial step
+            IO_Helper_obj.GetComponent<IO_Helper>().AdvanceTrial();
         }
     }
     public void toggleWalking()
@@ -55,7 +57,7 @@ public class Control_UI_Helper : MonoBehaviour
         bool isCurrWalking = animator.GetBool("isWalking");
         animator.SetBool("isWalking", !isCurrWalking);
         // toggle speed to 0/1 (might seem odd because isCurrWalking was before it was toggled)
-        path_follower.m_Speed = isCurrWalking ? 0 : 1;
+        path_follower.m_Speed = isCurrWalking ? 0 : 1.5f;
     }
 
     public void updateActiveNPCModel(string npc_gender)

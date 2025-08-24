@@ -6,7 +6,6 @@ using UnityEngine;
 public class LookAtSquare : MonoBehaviour
 {
     public CapsuleCollider XR_sight_line;
-    private CapsuleCollider menu_collider;
 
     private TimeSpan looking_progress_time;
     private TimeSpan time_needed_to_close_menu = TimeSpan.FromSeconds(3);
@@ -58,19 +57,14 @@ public class LookAtSquare : MonoBehaviour
         is_user_looking_at_box = val;
     }
 
-    public void SetNewMenuCollider(CapsuleCollider new_box)
-    {
-        ResetProgress();
-        menu_collider = new_box;
-    }
-
     public double GetLookingProgress()
     {
         return looking_progress_time.TotalSeconds / time_needed_to_close_menu.TotalSeconds;
     }
 
-    private void ResetProgress()
+    public void ResetProgress()
     {
+        is_user_looking_at_box = false;
         looking_progress_time = TimeSpan.Zero;
     }
 

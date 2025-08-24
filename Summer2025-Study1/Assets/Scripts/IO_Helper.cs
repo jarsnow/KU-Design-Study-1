@@ -663,12 +663,6 @@ public class IO_Helper : MonoBehaviour
             last_poll_time = start_time;
         }
 
-        // NPC starts walking after trial step 2
-        if (current_trial_step == 2)
-        {
-            control_ui.GetComponent<Control_UI_Helper>().toggleWalking();
-        }
-
         last_trial_start_time = System.DateTime.Now;
         current_trial_step++;
 
