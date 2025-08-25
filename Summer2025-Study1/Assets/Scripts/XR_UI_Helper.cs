@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
+
 //using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,8 +19,14 @@ public class XR_UI_Helper : MonoBehaviour
     public Control_UI_Helper Control_UI_Helper;
     public IO_Helper IO_Helper;
 
+    public CanvasGroup canvas_group;
+    public AudioSource audio_source;
+
     private int current_panel_index = 0;
     private bool next_panel_close_walks_agent = false;
+
+    private TimeSpan time_for_panel_fade_in = TimeSpan.FromSeconds(0.5f);
+    private DateTime time_panel_opened = DateTime.MaxValue;
 
     private TimeSpan time_after_panel_closing_to_walk_agent = TimeSpan.FromSeconds(3);
     private DateTime time_start = DateTime.MaxValue;
@@ -32,7 +40,17 @@ public class XR_UI_Helper : MonoBehaviour
     void Update()
     {
         UpdateMenuCloseButton();
+        UpdatePanelOpacity();
+        WalkAfterDelay();
+    }
 
+    private void UpdatePanelOpacity()
+    {
+        float progress = (DateTime.Now - time_panel_opened).Ticks / (float) time_for_panel_fade_in.Ticks;
+        canvas_group.alpha = progress;
+    }
+
+    private void WalkAfterDelay() {
         if (DateTime.Now - time_start > time_after_panel_closing_to_walk_agent)
         {
             // start walking, advance trial step
@@ -63,6 +81,12 @@ public class XR_UI_Helper : MonoBehaviour
 
         // canvases are backwards so rotate 180
         selected_panel.transform.Rotate(0, 180, 0);
+
+        // play sound
+        audio_source.Play();
+
+        // reset opacity
+        time_panel_opened = DateTime.Now;
     }
 
     public void SetNextPanelCloseToWalkAgent()
