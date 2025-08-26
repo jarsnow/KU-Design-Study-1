@@ -79,6 +79,8 @@ public class IO_Helper : MonoBehaviour
     private DateTime last_poll_time;
     public UInt16 current_trial_step = 1;
 
+    private List<string> raw_path_lines = new List<string>();
+
     // similar to SkintoneButtonClicked
     public void ModelButtonClicked(GameObject button_parent)
     {
@@ -140,12 +142,6 @@ public class IO_Helper : MonoBehaviour
         {
             RecordData();
         }
-
-        // record data for trial one (unnecessary?)
-        //if (current_trial_step == 1)
-        //{
-        //    RecordTrialOneData();
-        //}
     }
 
     void updateModelSkintone(string selected_model, int skintone)
@@ -237,6 +233,8 @@ public class IO_Helper : MonoBehaviour
             male_model.SetActive(true);
             control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("male");
         }
+
+        AdvanceTrial();
     }
 
     void CleanUIInput()
@@ -385,10 +383,14 @@ public class IO_Helper : MonoBehaviour
         // add a new line
         line_str += "\n";
 
-        // write a new line to file
-        string folder_path = save_folder_input.text;
-        string raw_path = folder_path + "\\raw.csv";
-        WriteToFile(raw_path, line_str);
+        // add to buffer
+        raw_path_lines.Add(line_str);
+
+        // check if a write is needed
+        if (raw_path_lines.Count > 10000)
+        {
+            FlushRawBuffer();
+        }
 
         // add values to averages
         moving_dist_sum += dist;
@@ -416,26 +418,12 @@ public class IO_Helper : MonoBehaviour
         }
     }
 
-    // does not actually write anything to files
-    // data collection should only start after trial zero
-    private void RecordTrialOneData()
+    private void FlushRawBuffer()
     {
-        double dist = GetDistance();
-        double gaze = GetGaze();
-
-        // trial info
-        trial_dist_sum += dist;
-        trial_dist_values.Add(dist);
-
-        trial_gaze_sum += gaze;
-        trial_gaze_values.Add(gaze);
-
-        // session info
-        session_dist_sum += dist;
-        session_dist_values.Add(dist);
-
-        session_gaze_sum += gaze;
-        session_gaze_values.Add(gaze);
+        string folder_path = save_folder_input.text;
+        string raw_path = folder_path + "\\raw.csv";
+        WriteToFile(raw_path, string.Join("", raw_path_lines));
+        raw_path_lines.Clear();
     }
 
     // should record averages of distance and gaze every 60 seconds
@@ -670,15 +658,11 @@ public class IO_Helper : MonoBehaviour
         GetComponent<TrialTriggerManager>().UpdateTrialStepControlUIFromTrialStep(current_trial_step);
     }
 
-    private void DisableTrialStepButtonIfNeeded()
-    {
-
-    }
-
     // record the remaining values for averages
     // does results need to be recorded?
     public void EndSession()
     {
+        FlushRawBuffer();
         RecordAverages();
     }
 
