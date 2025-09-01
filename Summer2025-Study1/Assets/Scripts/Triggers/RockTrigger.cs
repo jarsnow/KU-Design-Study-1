@@ -6,7 +6,8 @@ public class RockTrigger : MonoBehaviour
 {
 
     public Rigidbody[] rigidbodies;
-    // Start is called before the first frame update
+    public ParticleSystem dust_particle_system;
+    public ParticleSystem water_particle_system;
     void Start()
     {
         
@@ -22,6 +23,8 @@ public class RockTrigger : MonoBehaviour
         // step 5 goes to 6
         if (other.CompareTag("VRHead"))
         {
+            dust_particle_system.Play();
+            water_particle_system.Play();
             // set rocks to fall
             foreach (Rigidbody rigidbody in rigidbodies)
             {
