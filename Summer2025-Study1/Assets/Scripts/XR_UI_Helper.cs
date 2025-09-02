@@ -31,6 +31,8 @@ public class XR_UI_Helper : MonoBehaviour
     private TimeSpan time_after_panel_closing_to_walk_agent = TimeSpan.FromSeconds(3);
     private DateTime time_start = DateTime.MaxValue;
 
+    public AudioSource walking_audio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class XR_UI_Helper : MonoBehaviour
             // start walking, advance trial step
             Control_UI_Helper.toggleWalking();
             IO_Helper.AdvanceTrial();
+            walking_audio.Play();
 
             // disable
             time_start = DateTime.MaxValue;

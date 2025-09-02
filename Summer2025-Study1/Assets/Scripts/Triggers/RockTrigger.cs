@@ -8,6 +8,7 @@ public class RockTrigger : MonoBehaviour
     public Rigidbody[] rigidbodies;
     public ParticleSystem dust_particle_system;
     public ParticleSystem water_particle_system;
+    public AudioSource rocks_falling_audio;
     void Start()
     {
         
@@ -25,6 +26,7 @@ public class RockTrigger : MonoBehaviour
         {
             dust_particle_system.Play();
             water_particle_system.Play();
+            rocks_falling_audio.Play();
             // set rocks to fall
             foreach (Rigidbody rigidbody in rigidbodies)
             {
