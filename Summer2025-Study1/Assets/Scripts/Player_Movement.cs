@@ -23,7 +23,7 @@ public class Player_Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        rb.drag = 10;
+        rb.linearDamping = 10;
     }
 
     // Update is called once per frame
