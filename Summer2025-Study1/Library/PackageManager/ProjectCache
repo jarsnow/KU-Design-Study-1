@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Packages/manifest.json
+    m_FilePath: C:/Users/j634r988/Documents/GitHub/KU-Design-Study-1/Summer2025-Study1/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638946040948616120
-    m_Hash: 2258162919
+      ticks: 638946092220317556
+    m_Hash: 2539546430
   m_LockFileStatus:
-    m_FilePath: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Packages/packages-lock.json
+    m_FilePath: C:/Users/j634r988/Documents/GitHub/KU-Design-Study-1/Summer2025-Study1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638946040948691365
-    m_Hash: 3991242365
+      ticks: 638946092220348443
+    m_Hash: 3422781743
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Packages
+m_ProjectPath: C:/Users/j634r988/Documents/GitHub/KU-Design-Study-1/Summer2025-Study1/Packages
 m_EditorVersion: 6000.0.58f1 (44b8bf3a3225)
 m_ResolvedPackages:
 - packageId: com.unity.ai.navigation@2.0.9
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.9
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.ai.navigation@5218e4bf7edc
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.ai.navigation@5218e4bf7edc
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -159,7 +159,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.10.4
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.cinemachine@915237edaa40
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.cinemachine@915237edaa40
   assetPath: Packages/com.unity.cinemachine
   name: com.unity.cinemachine
   displayName: Cinemachine
@@ -369,7 +369,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -544,7 +544,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -659,7 +659,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -747,12 +747,136 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
+- packageId: com.unity.postprocessing@3.5.1
+  testable: 0
+  isDirectDependency: 1
+  version: 3.5.1
+  source: 1
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.postprocessing@4a41da475b74
+  assetPath: Packages/com.unity.postprocessing
+  name: com.unity.postprocessing
+  displayName: Post Processing
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The post-processing stack (v2) comes with a collection of effects
+    and image filters you can apply to your cameras to improve the visuals of your
+    games.
+  errors: []
+  versions:
+    all:
+    - 0.1.7
+    - 0.1.8
+    - 2.0.0-beta
+    - 2.0.1-beta
+    - 2.0.2-preview
+    - 2.0.3-preview
+    - 2.0.5-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 2.0.9-preview
+    - 2.0.10-preview
+    - 2.0.11-preview
+    - 2.0.12-preview
+    - 2.0.13-preview
+    - 2.0.14-preview
+    - 2.0.15-preview
+    - 2.0.16-preview
+    - 2.0.17-preview
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.6
+    - 2.1.7
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 3.0.1
+    - 3.0.3
+    - 3.1.0
+    - 3.1.1
+    - 3.2.0
+    - 3.2.1
+    - 3.2.2
+    - 3.3.0
+    - 3.4.0
+    - 3.5.0
+    - 3.5.1
+    compatible:
+    - 3.5.0
+    - 3.5.1
+    recommended: 3.5.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+    compliance:
+      status: 0
+      violations: []
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638938742139640000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.postprocessing@3.5/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Graphics.git
+    revision: fa7961686d1f2babd45a3acaf1f3939696bd1b2e
+    path: 
+  unityLifecycle:
+    version: 3.5.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n- Added Switch2 platform support\n\n###
+    Fixed\n- Remove support for PVRTC format in Unity 6.1 or newer\n- Fixed compute
+    based effects not supported on OpenGLES\n- Fixed issue with FastSign on WebGL/Safari
+    (IN-71005)\n- Documentation updates"}'
+  assetStore:
+    productId: 
+  fingerprint: 4a41da475b743ff131a9cfa5fdb2ff80d2c0f2d4
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 3.5.0
+    minimumUnityVersion: 2019.4.19f1
+  compliance:
+    status: 0
+    violation:
+      scopePatternExpression: 
+      message: 
+      readMoreLink: 
 - packageId: com.unity.render-pipelines.universal@17.0.4
   testable: 0
   isDirectDependency: 1
   version: 17.0.4
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.universal@e1fa89d1f997
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.universal@e1fa89d1f997
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal Render Pipeline
@@ -878,7 +1002,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.1
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.test-framework@1f954279c37e
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.test-framework@1f954279c37e
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -967,7 +1091,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.9
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.timeline@6b9e48457ddb
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.timeline@6b9e48457ddb
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1164,7 +1288,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.ugui@aa507f3228f0
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.ugui@aa507f3228f0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1259,7 +1383,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.5.2
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.xr.oculus@44578ba4bd45
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.xr.oculus@44578ba4bd45
   assetPath: Packages/com.unity.xr.oculus
   name: com.unity.xr.oculus
   displayName: Oculus XR Plugin
@@ -1457,7 +1581,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.15.1
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.xr.openxr@05fb1a7d75d1
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.xr.openxr@05fb1a7d75d1
   assetPath: Packages/com.unity.xr.openxr
   name: com.unity.xr.openxr
   displayName: OpenXR Plugin
@@ -4348,7 +4472,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.14.2
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -4503,7 +4627,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.3
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.xr.core-utils@f0450cbac8d6
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.xr.core-utils@f0450cbac8d6
   assetPath: Packages/com.unity.xr.core-utils
   name: com.unity.xr.core-utils
   displayName: XR Core Utilities
@@ -4628,7 +4752,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.5.1
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.xr.management@20be87dea580
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.xr.management@20be87dea580
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -4798,7 +4922,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.12
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.xr.legacyinputhelpers@b7579e86f3b4
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.xr.legacyinputhelpers@b7579e86f3b4
   assetPath: Packages/com.unity.xr.legacyinputhelpers
   name: com.unity.xr.legacyinputhelpers
   displayName: XR Legacy Input Helpers
@@ -4925,7 +5049,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -5004,7 +5128,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.4
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.core@05f02f04fe74
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.core@05f02f04fe74
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Scriptable Render Pipeline Core
@@ -5129,7 +5253,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.4
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.shadergraph@7ccd16edcc88
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.shadergraph@7ccd16edcc88
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -5244,7 +5368,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.universal-config@dd206bf35d04
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.render-pipelines.universal-config@dd206bf35d04
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal Render Pipeline Config
@@ -5351,7 +5475,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.3
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.searcher@1e17ce91558d
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.searcher@1e17ce91558d
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -5447,7 +5571,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.24
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.burst@f7a407abf4d5
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.burst@f7a407abf4d5
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -5681,7 +5805,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.mathematics@8017b507cc74
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5779,7 +5903,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.1
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.collections@56bff8827a7e
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.collections@56bff8827a7e
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -5967,7 +6091,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.rendering.light-transport@9bd588f963c0
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.rendering.light-transport@9bd588f963c0
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -6072,7 +6196,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.4
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6163,7 +6287,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.0
   source: 1
-  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
+  resolvedPath: C:\Users\j634r988\Documents\GitHub\KU-Design-Study-1\Summer2025-Study1\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
