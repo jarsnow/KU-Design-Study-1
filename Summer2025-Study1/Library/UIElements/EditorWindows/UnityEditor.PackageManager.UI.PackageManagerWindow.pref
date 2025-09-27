@@ -21,6 +21,6 @@ MonoBehaviour:
   m_Values:
   - '{}'
   - '{}'
-  - '{"m_ScrollOffset":{"x":0.0,"y":21.20001220703125}}'
-  - '{"m_Value":21.20001220703125,"m_LowValue":0.0,"m_HighValue":21.20001220703125}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":24.800079345703126}}'
+  - '{"m_Value":24.800079345703126,"m_LowValue":0.0,"m_HighValue":248.00003051757813}'
   - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'

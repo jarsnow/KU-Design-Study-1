@@ -1,0 +1,635 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.58f1 (44b8bf3a3225) revision 4503743'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 16023 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2025-09-20T19:57:55Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.58f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+63243
+-job-worker-count
+3
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1
+C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13228]  Target information:
+
+Player connection [13228]  * "[IP] 10.107.159.187 [Port] 0 [Flags] 2 [Guid] 2836564906 [EditorId] 2836564906 [Version] 1048832 [Id] WindowsEditor(7,hp-spectre) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [13228] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [13228] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 3
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 37.07 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.78 ms.
+Initialize engine version: 6000.0.58f1 (44b8bf3a3225)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.58f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8011 MB
+    Driver:   30.0.100.9864
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.58f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.58f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.58f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.58f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003213 seconds.
+- Loaded All Assemblies, in  1.188 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.170 seconds
+Domain Reload Profiling: 2356ms
+	BeginReloadAssembly (385ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (99ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (149ms)
+	LoadAllAssembliesAndSetupDomain (520ms)
+		LoadAssemblies (380ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (512ms)
+			TypeCache.Refresh (509ms)
+				TypeCache.ScanAssembly (463ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1171ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1050ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (83ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (232ms)
+			ProcessInitializeOnLoadAttributes (543ms)
+			ProcessInitializeOnLoadMethodAttributes (180ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.434 seconds
+Refreshing native plugins compatible for Editor in 10.75 ms, found 11 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00040] in .\Library\PackageCache\com.unity.xr.oculus@44578ba4bd45\Runtime\OculusLoader.cs:312 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0008c] in .\Library\PackageCache\com.unity.xr.oculus@44578ba4bd45\Runtime\OculusLoader.cs:297 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <152439c387994a8da523328132967f8d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <152439c387994a8da523328132967f8d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <152439c387994a8da523328132967f8d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <5818bc53b12b4560b54110897827736e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  2.808 seconds
+Domain Reload Profiling: 5232ms
+	BeginReloadAssembly (490ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (25ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (90ms)
+	RebuildCommonClasses (187ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (95ms)
+	LoadAllAssembliesAndSetupDomain (1617ms)
+		LoadAssemblies (1103ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (763ms)
+			TypeCache.Refresh (566ms)
+				TypeCache.ScanAssembly (523ms)
+			BuildScriptInfoCaches (158ms)
+			ResolveRequiredComponents (29ms)
+	FinalizeReload (2809ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2011ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (45ms)
+			BeforeProcessingInitializeOnLoad (599ms)
+			ProcessInitializeOnLoadAttributes (1073ms)
+			ProcessInitializeOnLoadMethodAttributes (280ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 12.54 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5066 unused Assets / (3.5 MB). Loaded Objects now: 5822.
+Memory consumption went from 125.3 MB to 121.8 MB.
+Total: 12.175200 ms (FindLiveObjects: 1.496900 ms CreateObjectMapping: 0.858800 ms MarkObjects: 6.950700 ms  DeleteObjects: 2.866600 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 8.14 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (1.9 MB). Loaded Objects now: 5822.
+Memory consumption went from 121.5 MB to 119.6 MB.
+Total: 6.309600 ms (FindLiveObjects: 0.397700 ms CreateObjectMapping: 0.376500 ms MarkObjects: 4.765800 ms  DeleteObjects: 0.768600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 6350.935448 seconds.
+  path: Assets/DefaultVolumeProfile.asset
+  artifactKey: Guid(548742b782fff554b8d9e83e8a740e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaultVolumeProfile.asset using Guid(548742b782fff554b8d9e83e8a740e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9c92c2e91f911677d9b9202927d29084') in 0.242252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Settings
+  artifactKey: Guid(7d8fb6f4e44026242a78be0895ec985d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings using Guid(7d8fb6f4e44026242a78be0895ec985d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f481eda13a29eb0c279a1415cd3baca1') in 0.5163323 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone6.mat
+  artifactKey: Guid(332652d51db55b645a60b7a82316fea5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone6.mat using Guid(332652d51db55b645a60b7a82316fea5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '94b1049c0d89b0dc440d96da9b59cdf7') in 0.1909192 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 7 Face.mat
+  artifactKey: Guid(5c3481a8972c64244954fd4a29aa100e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 7 Face.mat using Guid(5c3481a8972c64244954fd4a29aa100e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a3fac52e2d2c732598bffab9a19769d9') in 0.0495463 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Models/Female/Materials/Female Eye.mat
+  artifactKey: Guid(ad1bbaeb8af17384da02130d98ec975f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Eye.mat using Guid(ad1bbaeb8af17384da02130d98ec975f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '886facdf6da02d1276edaca49b50a80d') in 0.0381296 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/Female/Materials/Female Skin.mat
+  artifactKey: Guid(11f2b269b73c2114c80b5519681c433e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Skin.mat using Guid(11f2b269b73c2114c80b5519681c433e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a60ce14aad461514cdf986c9baeba85') in 0.0363106 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 6 Face.mat
+  artifactKey: Guid(f3847f15f36387f4ab8e59c6ae8de3e5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 6 Face.mat using Guid(f3847f15f36387f4ab8e59c6ae8de3e5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c49d00715d9de0a0adcb6107d39de5a9') in 0.0355524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Models/Female/Materials/Female Pants.mat
+  artifactKey: Guid(b0b378d12b0ca5c4ba8f2cadc4aa9d15) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Pants.mat using Guid(b0b378d12b0ca5c4ba8f2cadc4aa9d15) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f165564a2e9eabd37a34387a134454b5') in 0.0403339 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Models/Female/Materials/Female Face.mat
+  artifactKey: Guid(2e66cccae8c79ca4eaa71815030ac4c9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Face.mat using Guid(2e66cccae8c79ca4eaa71815030ac4c9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '701e8d1a02e2d917c00c9f003ee814cd') in 0.0378737 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Terrain/materials/cliff start_texture.mat
+  artifactKey: Guid(4e5ced551762a4556afe60d87f7ccbd3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Terrain/materials/cliff start_texture.mat using Guid(4e5ced551762a4556afe60d87f7ccbd3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '28a6a163d06e8e513ce1504e2930e436') in 0.0466994 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 4 Face.mat
+  artifactKey: Guid(5366944bc60bfc4458c7dcb392895566) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 4 Face.mat using Guid(5366944bc60bfc4458c7dcb392895566) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '49b3c8b6c7b58cb7be1b1bae2ba6b5ac') in 0.0417332 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 2 Face.mat
+  artifactKey: Guid(c93e5b4e937c08b49bce94b884c36bd6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 2 Face.mat using Guid(c93e5b4e937c08b49bce94b884c36bd6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '191858abce8cec11d04a70c48bdfc635') in 0.0354282 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Settings/Low_PipelineAsset.asset
+  artifactKey: Guid(efd7d55f5148e1f44995f36cf144d956) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Low_PipelineAsset.asset using Guid(efd7d55f5148e1f44995f36cf144d956) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '833d6ce464eff85ec52a61285d363bd4') in 0.0715908 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Terrain/materials/water and plants.mat
+  artifactKey: Guid(43fa3825363fd4485be5746d7fc516df) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Terrain/materials/water and plants.mat using Guid(43fa3825363fd4485be5746d7fc516df) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ecc1ad74f37425b649fc288c1f5227b5') in 0.0303616 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Models/Female/Materials/Female Shoes.mat
+  artifactKey: Guid(cb4530edde0534745a29a4833040133f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Shoes.mat using Guid(cb4530edde0534745a29a4833040133f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f72b131463ea989c6688edd13535750f') in 0.0414993 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 6 Face.mat
+  artifactKey: Guid(0bae02beacafcd1408a6d0cee85c065a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 6 Face.mat using Guid(0bae02beacafcd1408a6d0cee85c065a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1141ad3a0b3d2eaa6fe35e27e12c5672') in 0.0445211 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(74ef16b7d2449b64aa6af7161892f0ed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset using Guid(74ef16b7d2449b64aa6af7161892f0ed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '61529a50c73699609a1c374f637b9558') in 0.0597181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone2.mat
+  artifactKey: Guid(43ffd04a83ec2ae44a62c7b1fd85b774) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone2.mat using Guid(43ffd04a83ec2ae44a62c7b1fd85b774) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '42b85d6f220fda3266d37a83eb64eeb8') in 0.024009 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Models/Male/Materials/Male Face.mat
+  artifactKey: Guid(38247a2dcd675d849b9461c7630f6ed4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Male Face.mat using Guid(38247a2dcd675d849b9461c7630f6ed4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b31a248537e83b94a720dc6f2e3086bf') in 0.0294987 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Settings/High_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(4cbd5dfa88f204740873832619fc07dd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/High_PipelineAsset_ForwardRenderer.asset using Guid(4cbd5dfa88f204740873832619fc07dd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd38b7a5e56287d835cbc9d87f57feb53') in 0.0319125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  artifactKey: Guid(1eb78fa0d1227ed48b7c35147f4ece24) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(1eb78fa0d1227ed48b7c35147f4ece24) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3ae8ac844594f0003885af8bb309bb05') in 0.0305798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Terrain/materials/dark_rock_texture.mat
+  artifactKey: Guid(41d4a854c1c6843c0baf6c1e0944a580) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Terrain/materials/dark_rock_texture.mat using Guid(41d4a854c1c6843c0baf6c1e0944a580) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '11d7de30d943ce14d8904e99b075ea28') in 0.026397 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 0 Face.mat
+  artifactKey: Guid(4d3c7916afaf4b54daa90eb563660762) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 0 Face.mat using Guid(4d3c7916afaf4b54daa90eb563660762) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '088aea2748ecbf38d8b85ce7dc90bc93') in 0.0263309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Settings/Medium_PipelineAsset.asset
+  artifactKey: Guid(90e206238a2bdb94186eaf880dfd6288) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Medium_PipelineAsset.asset using Guid(90e206238a2bdb94186eaf880dfd6288) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4426e006bd34feeb2f3d3005013d6dea') in 0.0439044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Settings/Medium_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(d9bbbffe6fcbe4845817b5dc88dfc94f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Medium_PipelineAsset_ForwardRenderer.asset using Guid(d9bbbffe6fcbe4845817b5dc88dfc94f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7220c63fdbead75724d89bdd97bc2616') in 0.0171345 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone0.mat
+  artifactKey: Guid(b9d1a73dc8ec6d244a8f9bc6fc07cbad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone0.mat using Guid(b9d1a73dc8ec6d244a8f9bc6fc07cbad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cd6a495244ffadf76bb4ba71c0d67827') in 0.0389514 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone1.mat
+  artifactKey: Guid(d281644ccf293674896f8c2427ed1155) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone1.mat using Guid(d281644ccf293674896f8c2427ed1155) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '15f580a9a754424a0d320d3962a3f366') in 0.0274176 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 5 Face.mat
+  artifactKey: Guid(264ad84a30364b24fafb0a9d1a8b9ac3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 5 Face.mat using Guid(264ad84a30364b24fafb0a9d1a8b9ac3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5e10e9620375eebcaec0970ee579054a') in 0.0289391 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Settings/High_PipelineAsset.asset
+  artifactKey: Guid(94a850bbf3ca08e4992534dd7fb12edb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/High_PipelineAsset.asset using Guid(94a850bbf3ca08e4992534dd7fb12edb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8fdcbc0896056ad56ae0b50307dfbb45') in 0.0356459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 4 Face.mat
+  artifactKey: Guid(154647cd2adc81649a04597d0ecdb17f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 4 Face.mat using Guid(154647cd2adc81649a04597d0ecdb17f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dcc7b6646b81a09a6c4526bbe71bd61f') in 0.0272365 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone3.mat
+  artifactKey: Guid(9ab78e1830b3b31438879f0b95422783) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone3.mat using Guid(9ab78e1830b3b31438879f0b95422783) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '783d527234745b008d03dbbb6824b1d3') in 0.0306961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Female/Materials/Faces/Skintone 1 Face.mat
+  artifactKey: Guid(1a6d424bdbf549543a7405927433dfec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Faces/Skintone 1 Face.mat using Guid(1a6d424bdbf549543a7405927433dfec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '38ab449cca39220191ad9a5a024d91ee') in 0.0241818 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Models/Male/Materials/Male Shirt.mat
+  artifactKey: Guid(8bc0a018097af344799476c54c23a72b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Male Shirt.mat using Guid(8bc0a018097af344799476c54c23a72b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '95090a5e53c8758dee7b430ca12e05fa') in 0.0336314 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/VRHead/face material.mat
+  artifactKey: Guid(4053c3a7dfff6a44ab19da2736c51840) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/VRHead/face material.mat using Guid(4053c3a7dfff6a44ab19da2736c51840) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '69a24284eb96bea6d9447b35c5c6d305') in 0.0313579 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Models/Male/Materials/Male Eye.mat
+  artifactKey: Guid(7f60d4e1df0dbdb4e91a2b65421e3490) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Male Eye.mat using Guid(7f60d4e1df0dbdb4e91a2b65421e3490) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '108199a3691aa317476e73b83782145a') in 0.0319046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 0 Face.mat
+  artifactKey: Guid(c2091fb8ae16ee14fab70797f6cee3ad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 0 Face.mat using Guid(c2091fb8ae16ee14fab70797f6cee3ad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '50831ddf63741501b4afcce70682f90a') in 0.026648 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Models/Male/Materials/Male Pants.mat
+  artifactKey: Guid(e711a59d575581540a2c2400d9268291) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Male Pants.mat using Guid(e711a59d575581540a2c2400d9268291) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '849620bb7f8e4f967ff7c57fb458b39b') in 0.0258104 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Models/Female/Materials/Female Shirt.mat
+  artifactKey: Guid(309c375f7c91b2f469db03de6217a138) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Shirt.mat using Guid(309c375f7c91b2f469db03de6217a138) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '36c8e111ea503b381e94e32bcb1bb65e') in 0.0249959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Settings/Very Low_PipelineAsset.asset
+  artifactKey: Guid(7f932917d6dfc0a45b13661e12608437) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Very Low_PipelineAsset.asset using Guid(7f932917d6dfc0a45b13661e12608437) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6541de7c9b874ce5546d369c783b93ee') in 0.0332758 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/URP.asset
+  artifactKey: Guid(6c24a7bcf69af1248a9ddee64ddbac95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP.asset using Guid(6c24a7bcf69af1248a9ddee64ddbac95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a8e50b969f051b7e09226532c4ee036') in 0.0030074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Settings/Very High_PipelineAsset.asset
+  artifactKey: Guid(318a971f65cb5064e937b3f960c7ea41) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Very High_PipelineAsset.asset using Guid(318a971f65cb5064e937b3f960c7ea41) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ea28357d7fd427d860424bf1449c1f31') in 0.0401395 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 2 Face.mat
+  artifactKey: Guid(fb9458d3ecd03a7429fb754795611f45) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 2 Face.mat using Guid(fb9458d3ecd03a7429fb754795611f45) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '15c54d9ce58b87d41183b13408836c66') in 0.0242577 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(dea285af21e1d4b48acc1752ca22a954) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Ultra_PipelineAsset_ForwardRenderer.asset using Guid(dea285af21e1d4b48acc1752ca22a954) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4534a9794cb59e1406c04e6a394d5f3f') in 0.0309295 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Settings/Low_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(ca647b7300b94f149aad0a24fe7a5fc7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Low_PipelineAsset_ForwardRenderer.asset using Guid(ca647b7300b94f149aad0a24fe7a5fc7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '575055a477d9d9497e4d6e00af6ee382') in 0.0278233 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Models/Skintones/Materials/Skintone5.mat
+  artifactKey: Guid(49be30b5045a1f2408db9c4e4249e6ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Skintones/Materials/Skintone5.mat using Guid(49be30b5045a1f2408db9c4e4249e6ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7610461b5c25b9e48c6db83aef126692') in 0.0284104 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Terrain/materials/end wall_texture.mat
+  artifactKey: Guid(6e72d78d8501144d686492db369ce9a5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Terrain/materials/end wall_texture.mat using Guid(6e72d78d8501144d686492db369ce9a5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'deb076708a4c773e760866267686c3fb') in 0.0279219 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Models/Female/Materials/Female Glasses.mat
+  artifactKey: Guid(8a8ec219daba55c4590c6f0c89f585bb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Female/Materials/Female Glasses.mat using Guid(8a8ec219daba55c4590c6f0c89f585bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '14539a6cfffa11a75782b8d14e961150') in 0.0232338 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(c91f56df06890b647b7721df776dccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(c91f56df06890b647b7721df776dccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e4221badca721ed55384b5e7c2dc175') in 0.0012479 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Terrain/materials/cliff end_texture.mat
+  artifactKey: Guid(24a59e320d620405aa81af3552bb442d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Terrain/materials/cliff end_texture.mat using Guid(24a59e320d620405aa81af3552bb442d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '28683b49bd10b07890e6547317c7e897') in 0.0322142 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 7 Face.mat
+  artifactKey: Guid(9892b9aa411ec8a4597bf1559a14cde4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 7 Face.mat using Guid(9892b9aa411ec8a4597bf1559a14cde4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6fa9ce4dd2296fc7aba3585d0b10783c') in 0.0255873 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Male/Materials/Faces/Skintone 1 Face.mat
+  artifactKey: Guid(d02d9c46e3c2fbe4e8225d3dea379ad5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Models/Male/Materials/Faces/Skintone 1 Face.mat using Guid(d02d9c46e3c2fbe4e8225d3dea379ad5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '38e41a213f784ea0a6ca13bd821a9685') in 0.0355671 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
