@@ -448,6 +448,8 @@
 "Assets/Addons/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs"
 "Assets/Addons/StandaloneFileBrowser/StandaloneFileBrowserMac.cs"
 "Assets/Addons/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs"
+"Assets/IgniteCoders/Simple Water Shader/Info/Scripts/Readme.cs"
+"Assets/IgniteCoders/Simple Water Shader/Resources/WaterReflection.cs"
 "Assets/Scripts/Cam_Control.cs"
 "Assets/Scripts/Cam_Follow.cs"
 "Assets/Scripts/Control_UI_Helper.cs"
@@ -464,6 +466,8 @@
 "Assets/Scripts/Triggers/StartOfBridgeTrigger.cs"
 "Assets/Scripts/Triggers/VisionTrigger.cs"
 "Assets/Scripts/XR_UI_Helper.cs"
+"Assets/Stylized Water Shader/Scripts/BuoyantObject.cs"
+"Assets/Stylized Water Shader/Scripts/GerstnerWaveDisplacement.cs"
 -langversion:9.0
 /deterministic
 /optimize+
