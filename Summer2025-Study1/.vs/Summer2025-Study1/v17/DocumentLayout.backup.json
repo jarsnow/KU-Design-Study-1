@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\",
+  "WorkspaceRootPath": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{691DD047-361A-2864-6776-3FD10D9545AA}|Assembly-CSharp-Editor.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\ignitecoders\\simple water shader\\info\\scripts\\editor\\readmeeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691DD047-361A-2864-6776-3FD10D9545AA}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\ignitecoders\\simple water shader\\info\\scripts\\editor\\readmeeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\j634r988\\documents\\github\\ku-design-study-1\\summer2025-study1\\assets\\scripts\\triggers\\rocktrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\triggers\\rocktrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\triggers\\rocktrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ReadmeEditor.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\IgniteCoders\\Simple Water Shader\\Info\\Scripts\\Editor\\ReadmeEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\IgniteCoders\\Simple Water Shader\\Info\\Scripts\\Editor\\ReadmeEditor.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\IgniteCoders\\Simple Water Shader\\Info\\Scripts\\Editor\\ReadmeEditor.cs",
+              "RelativeToolTip": "Assets\\IgniteCoders\\Simple Water Shader\\Info\\Scripts\\Editor\\ReadmeEditor.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAjwDIAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T00:28:49.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Lit.shader",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@e1fa89d1f997\\Shaders\\Lit.shader",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
@@ -35,16 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RockTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\RockTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\RockTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Triggers\\RockTrigger.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\RockTrigger.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\RockTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\Triggers\\RockTrigger.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA7wBwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:42:01.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T17:42:01.646Z"
             }
           ]
         }
