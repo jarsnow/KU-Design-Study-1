@@ -100,7 +100,7 @@ public class Control_UI_Helper : MonoBehaviour
     }
 
     // function referenced by input action system
-    void OnToggleMenu()
+    void OnToggleMenu(bool state)
     {
         ToggleMenu();
     }

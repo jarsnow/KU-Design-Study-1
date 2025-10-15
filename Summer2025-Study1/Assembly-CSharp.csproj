@@ -67,6 +67,7 @@
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserLinux.cs" />
     <Compile Include="Assets\Stylized Water Shader\Scripts\BuoyantObject.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserEditor.cs" />
+    <Compile Include="Assets\Scripts\SetUIActive.cs" />
     <Compile Include="Assets\Scripts\LookAtSquare.cs" />
     <Compile Include="Assets\Scripts\Control_UI_Helper.cs" />
     <Compile Include="Assets\Scripts\OpenFile.cs" />

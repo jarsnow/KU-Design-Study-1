@@ -459,6 +459,7 @@
 "Assets/Scripts/OpenFile.cs"
 "Assets/Scripts/Player_Movement.cs"
 "Assets/Scripts/ResetVRPosition.cs"
+"Assets/Scripts/SetUIActive.cs"
 "Assets/Scripts/TrialTriggerManager.cs"
 "Assets/Scripts/Triggers/CloseToAgentTrigger.cs"
 "Assets/Scripts/Triggers/EndOfBridgeTrigger.cs"
