@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndOfBridgeTrigger : MonoBehaviour
 {
     public IO_Helper IO;
+    public AssignRigidBodies terrain_script;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,12 @@ public class EndOfBridgeTrigger : MonoBehaviour
         if (IO.current_trial_step == 4 && other.CompareTag("VRHead"))
         {
             IO.AdvanceTrial();
+        }
+
+        // make planks fall
+        if (other.CompareTag("VRHead"))
+        {
+            terrain_script.drop_planks();
         }
     }
 }

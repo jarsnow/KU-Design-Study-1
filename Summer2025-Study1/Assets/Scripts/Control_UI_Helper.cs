@@ -1,6 +1,8 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 //using UnityEditor.Animations;
 using UnityEngine;
@@ -22,6 +24,10 @@ public class Control_UI_Helper : MonoBehaviour
     public GameObject supportive_anims;
     public GameObject unsupportive_anims;
 
+    public AnimationClip[] extra_idle_anims;
+    private List<AnimationClip> extra_idle_anims_shuffled;
+    private DateTime last_extra_anim_time = DateTime.Now;
+
     public GameObject IO_Helper_obj;
 
     public CinemachineDollyCart path_follower;
@@ -35,6 +41,7 @@ public class Control_UI_Helper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reshuffle_extra_idle_anims();
         animator = female_animator;
     }
 
@@ -50,7 +57,37 @@ public class Control_UI_Helper : MonoBehaviour
             // advance trial step
             IO_Helper_obj.GetComponent<IO_Helper>().AdvanceTrial();
         }
+
+        // make the npc do extra random actions while they're just standing around
+        if (IO_Helper_obj.GetComponent<IO_Helper>().current_trial_step <= 2 &&
+            animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") &&
+            (DateTime.Now - last_extra_anim_time) >= TimeSpan.FromSeconds(12.0f)) {
+
+
+            if (extra_idle_anims_shuffled.Count == 0)
+            {
+                reshuffle_extra_idle_anims();
+            }
+            AnimationClip random_anim = extra_idle_anims_shuffled[0];
+            extra_idle_anims_shuffled.RemoveAt(0);
+
+            StartOneshotAnimation(random_anim);
+            last_extra_anim_time = DateTime.Now;
+        }
     }
+
+    void reshuffle_extra_idle_anims()
+    {
+        extra_idle_anims_shuffled = extra_idle_anims.ToList<AnimationClip>();
+        for (int i = extra_idle_anims_shuffled.Count() - 1; i >= 1; i--)
+        {
+            int j = UnityEngine.Random.Range(0, i);
+            AnimationClip temp = extra_idle_anims_shuffled[i];
+            extra_idle_anims_shuffled[i] = extra_idle_anims_shuffled[j];
+            extra_idle_anims_shuffled[j] = temp;
+        }
+    }
+
     public void toggleWalking()
     {
         // toggle animation

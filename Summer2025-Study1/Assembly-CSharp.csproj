@@ -65,7 +65,6 @@
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowser.cs" />
     <Compile Include="Assets\Scripts\Triggers\StartOfBridgeTrigger.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserLinux.cs" />
-    <Compile Include="Assets\Stylized Water Shader\Scripts\BuoyantObject.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserEditor.cs" />
     <Compile Include="Assets\Scripts\SetUIActive.cs" />
     <Compile Include="Assets\Scripts\LookAtSquare.cs" />
@@ -73,18 +72,21 @@
     <Compile Include="Assets\Scripts\OpenFile.cs" />
     <Compile Include="Assets\Scripts\Triggers\RockTrigger.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />
-    <Compile Include="Assets\Stylized Water Shader\Scripts\GerstnerWaveDisplacement.cs" />
+    <Compile Include="Assets\Addons\IgniteCoders\Simple Water Shader\Info\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\IO_Helper.cs" />
     <Compile Include="Assets\Scripts\Triggers\VisionTrigger.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserMac.cs" />
-    <Compile Include="Assets\IgniteCoders\Simple Water Shader\Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\Addons\Stylized Water Shader\Scripts\BuoyantObject.cs" />
     <Compile Include="Assets\Scripts\Triggers\EndOfBridgeTrigger.cs" />
-    <Compile Include="Assets\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
     <Compile Include="Assets\Scripts\Cam_Follow.cs" />
+    <Compile Include="Assets\Addons\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
     <Compile Include="Assets\Scripts\ResetVRPosition.cs" />
     <Compile Include="Assets\Scripts\Cam_Control.cs" />
+    <Compile Include="Assets\Addons\Stylized Water Shader\Scripts\GerstnerWaveDisplacement.cs" />
     <Compile Include="Assets\Scripts\Triggers\CloseToAgentTrigger.cs" />
+    <Compile Include="Assets\Scripts\ControlTerrainObjects.cs" />
     <Compile Include="Assets\Scripts\XR_UI_Helper.cs" />
+    <Compile Include="Assets\Scripts\FallingPlankSound.cs" />
     <Compile Include="Assets\Scripts\TrialTriggerManager.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\IStandaloneFileBrowser.cs" />
     <Compile Include="Assets\Addons\StandaloneFileBrowser\StandaloneFileBrowserWindows.cs" />
@@ -92,7 +94,7 @@
   <ItemGroup>
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Stylized Water Shader\Shaders\Lighting.hlsl" />
+    <None Include="Assets\Addons\Stylized Water Shader\Shaders\Lighting.hlsl" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -106,12 +108,12 @@
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Addons\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Stylized Water Shader\Shaders\HSVLerp.hlsl" />
+    <None Include="Assets\Addons\Stylized Water Shader\Shaders\HSVLerp.hlsl" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Stylized Water Shader\Shaders\DistortUV.hlsl" />
+    <None Include="Assets\Addons\Stylized Water Shader\Shaders\DistortUV.hlsl" />
     <None Include="Assets\Addons\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Stylized Water Shader\Shaders\GerstnerWaves.hlsl" />
+    <None Include="Assets\Addons\Stylized Water Shader\Shaders\GerstnerWaves.hlsl" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Addons\StandaloneFileBrowser\Plugins\System.Windows.Forms.dll" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
