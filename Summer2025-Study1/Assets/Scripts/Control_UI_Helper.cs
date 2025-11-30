@@ -53,7 +53,8 @@ public class Control_UI_Helper : MonoBehaviour
         if(path_progress >= .99999 && !is_done_walking)
         {
             is_done_walking = true;
-            toggleWalking();
+            animator.SetBool("isWalking", false);
+            path_follower.m_Speed = 0;
             // advance trial step
             IO_Helper_obj.GetComponent<IO_Helper>().AdvanceTrial();
         }
@@ -90,11 +91,14 @@ public class Control_UI_Helper : MonoBehaviour
 
     public void toggleWalking()
     {
+        // wait for idle if walking is not true
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")){}
+
         // toggle animation
         bool isCurrWalking = animator.GetBool("isWalking");
         animator.SetBool("isWalking", !isCurrWalking);
         // toggle speed to 0/1 (might seem odd because isCurrWalking was before it was toggled)
-        path_follower.m_Speed = isCurrWalking ? 0 : 1.5f;
+        path_follower.m_Speed = isCurrWalking ? 0 : 0.75f;
     }
 
     public void updateActiveNPCModel(string npc_gender)

@@ -35,6 +35,7 @@ public class AssignRigidBodies : MonoBehaviour
 
     public void drop_planks()
     {
+        Debug.Log("hi");
         StartCoroutine(drop_planks_coroutine());
     }
 
@@ -46,8 +47,8 @@ public class AssignRigidBodies : MonoBehaviour
             Rigidbody rigid_body = obj.GetComponent<Rigidbody>();
             rigid_body.isKinematic = false; // set to false for it to fall
 
-            // wait for 0.2 seconds
-            yield return new WaitForSeconds(0.2f);
+            // wait seconds
+            yield return new WaitForSeconds(0.1f);
         }
 
         yield return new WaitForSeconds(0);

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\scripts\\fallingplanksound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingplanksound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\scripts\\triggers\\closetoagenttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\triggers\\closetoagenttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\control_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\control_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\io_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\io_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\xr_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\xr_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FallingPlankSound.cs",
-              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\FallingPlankSound.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FallingPlankSound.cs",
-              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\FallingPlankSound.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FallingPlankSound.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA/wCcAAAA4AAAAAAAAAA==",
+              "Title": "CloseToAgentTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:16:33.851Z",
+              "WhenOpened": "2025-11-25T18:29:59.695Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Control_UI_Helper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Control_UI_Helper.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Control_UI_Helper.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwD8AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T21:51:09.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IO_Helper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\IO_Helper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IO_Helper.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\IO_Helper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IO_Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T21:50:29.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "XR_UI_Helper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\XR_UI_Helper.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\XR_UI_Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T21:50:20.88Z"
             }
           ]
         }

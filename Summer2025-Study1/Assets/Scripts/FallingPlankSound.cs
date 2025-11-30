@@ -34,12 +34,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 AudioSource source = GetComponent<AudioSource>();
                 source.resource = plank_noise;
 
-                float pitch_modifier = Random.Range(0.8f, 1.2f);
+                float pitch_modifier = Random.Range(0.5f, 0.7f);
                 source.pitch = pitch_modifier;
 
                 // modify audio volume based on velocity
                 Debug.Log("velocity: " + collision.relativeVelocity.magnitude.ToString());
 
+                source.volume = Mathf.Max(0.1f, Mathf.Min(1.5f, collision.relativeVelocity.magnitude / 8));
+                source.spatialBlend = 1.0f;
+                source.dopplerLevel = 0;
                 source.Play();
             }
         }
