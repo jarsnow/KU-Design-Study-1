@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: d9be20e5d4ac04a7f8c7bfd1c4330a4f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - WORLD_SPACE_UV_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -50,7 +51,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - WORLD_SPACE_UV: 0
+    - WORLD_SPACE_UV: 1
     - _Depth_Fade_Distance: 0
     - _Foam_Blend: 1
     - _Horizon_Distance: 4.8
@@ -64,8 +65,8 @@ Material:
     - _Intersection_Foam_Tiling: 100
     - _Lighting_Hardness: 0.54
     - _Lighting_Smoothness: 0.496
-    - _Normals_Scale: 0.037
-    - _Normals_Speed: 0.073
+    - _Normals_Scale: 0.027
+    - _Normals_Speed: 0.056
     - _Normals_Strength: 0.821
     - _QueueControl: 1
     - _QueueOffset: 0
@@ -81,9 +82,9 @@ Material:
     - _Surface_Foam_Distortion: 0.94
     - _Surface_Foam_Speed: 1
     - _Surface_Foam_Tiling: 16.1
-    - _Wave_Length: 5.64
-    - _Wave_Speed: 0.859
-    - _Wave_Steepness: 0.09
+    - _Wave_Length: 2.6
+    - _Wave_Speed: 0.77
+    - _Wave_Steepness: 0.25
     m_Colors:
     - _Deep_Color: {r: 0, g: 0.19612709, b: 0.3773585, a: 0.36862746}
     - _Diffuse_Color: {r: 1, g: 0, b: 0, a: 1}

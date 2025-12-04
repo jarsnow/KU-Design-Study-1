@@ -31,8 +31,10 @@ public class Control_UI_Helper : MonoBehaviour
     public GameObject IO_Helper_obj;
 
     public CinemachineDollyCart path_follower;
+    public GameObject NPC;
     public CinemachinePath path;
     private bool is_done_walking = false;
+    private bool has_turned_around = false;
 
     private AnimatorOverrideController overrider;
 
@@ -59,10 +61,23 @@ public class Control_UI_Helper : MonoBehaviour
             IO_Helper_obj.GetComponent<IO_Helper>().AdvanceTrial();
         }
 
+        // turn around but only once, after done with the animation
+        if (is_done_walking && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !has_turned_around)
+        {
+            NPC.transform.Rotate(0, 180, 0);
+            has_turned_around = true;
+        }
+
+        // adjust speed based on whether or not the agent needs to walk
+        if (animator.GetBool("isWalking") && animator.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
+        {
+            path_follower.m_Speed = 0.75f;
+        }
+
         // make the npc do extra random actions while they're just standing around
         if (IO_Helper_obj.GetComponent<IO_Helper>().current_trial_step <= 2 &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") &&
-            (DateTime.Now - last_extra_anim_time) >= TimeSpan.FromSeconds(12.0f)) {
+            (DateTime.Now - last_extra_anim_time) >= TimeSpan.FromSeconds(1.0f)) {
 
 
             if (extra_idle_anims_shuffled.Count == 0)
@@ -91,14 +106,9 @@ public class Control_UI_Helper : MonoBehaviour
 
     public void toggleWalking()
     {
-        // wait for idle if walking is not true
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")){}
-
         // toggle animation
         bool isCurrWalking = animator.GetBool("isWalking");
         animator.SetBool("isWalking", !isCurrWalking);
-        // toggle speed to 0/1 (might seem odd because isCurrWalking was before it was toggled)
-        path_follower.m_Speed = isCurrWalking ? 0 : 0.75f;
     }
 
     public void updateActiveNPCModel(string npc_gender)
