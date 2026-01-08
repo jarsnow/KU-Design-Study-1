@@ -67,7 +67,7 @@ Material:
     - _Lighting_Smoothness: 0.496
     - _Normals_Scale: 0.027
     - _Normals_Speed: 0.056
-    - _Normals_Strength: 0.821
+    - _Normals_Strength: 0.75
     - _QueueControl: 1
     - _QueueOffset: 0
     - _Refraction_Scale: 0.01
@@ -83,10 +83,10 @@ Material:
     - _Surface_Foam_Speed: 1
     - _Surface_Foam_Tiling: 16.1
     - _Wave_Length: 2.6
-    - _Wave_Speed: 0.77
-    - _Wave_Steepness: 0.25
+    - _Wave_Speed: 1
+    - _Wave_Steepness: 0.11
     m_Colors:
-    - _Deep_Color: {r: 0, g: 0.19612709, b: 0.3773585, a: 0.36862746}
+    - _Deep_Color: {r: 0.1577216, g: 0.2127004, b: 0.2943396, a: 1}
     - _Diffuse_Color: {r: 1, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 0, g: 1, b: 0.46160954, a: 0.4392157}
     - _Horizon_Color: {r: 0.013898173, g: 0.0603773, b: 0.04469385, a: 1}
