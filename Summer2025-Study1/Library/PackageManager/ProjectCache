@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947813300686356
-    m_Hash: 2539546430
+      ticks: 639035021208611252
+    m_Hash: 747423829
   m_LockFileStatus:
     m_FilePath: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947813300755774
-    m_Hash: 3422781743
+      ticks: 639035021208677296
+    m_Hash: 2262472821
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,84 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/John/Documents/repos/new_study_1/Summer2025-Study1/Packages
 m_EditorVersion: 6000.0.58f1 (44b8bf3a3225)
 m_ResolvedPackages:
+- packageId: com.nobi.roundedcorners@https://github.com/kirevdokimov/Unity-UI-Rounded-Corners.git
+  testable: 0
+  isDirectDependency: 1
+  version: 3.5.0
+  source: 5
+  resolvedPath: C:\Users\John\Documents\repos\new_study_1\Summer2025-Study1\Library\PackageCache\com.nobi.roundedcorners@33135342e868
+  assetPath: Packages/com.nobi.roundedcorners
+  name: com.nobi.roundedcorners
+  displayName: UI Rounded Corners
+  author:
+    name: 
+    email: 
+    url: 
+  category: UI
+  type: 
+  description: This package provides components and shaders that allow you to add
+    rounded corners to UI elements!
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - UI
+  - Shader
+  - Cg
+  - Hlsl
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+    compliance:
+      status: 0
+      violations: []
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 33135342e868201eb0d4cef821ecab90caca373e
+    revision: HEAD
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 33135342e868201eb0d4cef821ecab90caca373e
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 
+    minimumUnityVersion: 
+  compliance:
+    status: 0
+    violation:
+      scopePatternExpression: 
+      message: 
+      readMoreLink: 
 - packageId: com.unity.ai.navigation@2.0.9
   testable: 0
   isDirectDependency: 1
@@ -260,6 +338,7 @@ m_ResolvedPackages:
     - 3.1.2
     - 3.1.3
     - 3.1.4
+    - 3.1.5
     compatible:
     - 2.10.4
     - 2.10.5
@@ -276,7 +355,8 @@ m_ResolvedPackages:
     - 3.1.2
     - 3.1.3
     - 3.1.4
-    recommended: 3.1.4
+    - 3.1.5
+    recommended: 3.1.5
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -468,9 +548,15 @@ m_ResolvedPackages:
     - 2.9.2
     - 2.9.3
     - 2.10.0
+    - 2.10.1
+    - 2.10.2
+    - 2.11.2
     compatible:
     - 2.9.3
     - 2.10.0
+    - 2.10.1
+    - 2.10.2
+    - 2.11.2
     recommended: 2.9.3
     deprecated: []
   dependencies: []
@@ -588,10 +674,12 @@ m_ResolvedPackages:
     - 2.0.22
     - 2.0.23
     - 2.0.25
+    - 2.0.26
     compatible:
     - 2.0.23
     - 2.0.25
-    recommended: 2.0.25
+    - 2.0.26
+    recommended: 2.0.26
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -1199,9 +1287,11 @@ m_ResolvedPackages:
     - 1.8.7
     - 1.8.8
     - 1.8.9
+    - 1.8.10
     compatible:
     - 1.8.9
-    recommended: 1.8.9
+    - 1.8.10
+    recommended: 1.8.10
     deprecated: []
   dependencies:
   - name: com.unity.modules.audio
@@ -1646,10 +1736,16 @@ m_ResolvedPackages:
     - 1.15.1
     - 1.16.0-pre.1
     - 1.16.0-pre.2
+    - 1.16.0
+    - 1.16.1
+    - 1.17.0-pre.1
     compatible:
     - 1.15.1
     - 1.16.0-pre.1
     - 1.16.0-pre.2
+    - 1.16.0
+    - 1.16.1
+    - 1.17.0-pre.1
     recommended: 1.15.1
     deprecated: []
   dependencies:
@@ -4551,9 +4647,13 @@ m_ResolvedPackages:
     - 1.14.1
     - 1.14.2
     - 1.15.0
+    - 1.16.0
+    - 1.17.0
     compatible:
     - 1.14.2
     - 1.15.0
+    - 1.16.0
+    - 1.17.0
     recommended: 1.14.2
     deprecated: []
   dependencies:
@@ -4832,10 +4932,14 @@ m_ResolvedPackages:
     - 4.5.0
     - 4.5.1
     - 4.5.2
+    - 4.5.3
+    - 4.5.4
     compatible:
     - 4.5.1
     - 4.5.2
-    recommended: 4.5.2
+    - 4.5.3
+    - 4.5.4
+    recommended: 4.5.4
     deprecated: []
   dependencies:
   - name: com.unity.modules.vr
@@ -4976,9 +5080,13 @@ m_ResolvedPackages:
     - 2.1.10
     - 2.1.11
     - 2.1.12
+    - 2.1.13
+    - 3.0.0
     compatible:
     - 2.1.12
-    recommended: 2.1.12
+    - 2.1.13
+    - 3.0.0
+    recommended: 2.1.13
     deprecated: []
   dependencies:
   - name: com.unity.modules.vr
@@ -5515,10 +5623,12 @@ m_ResolvedPackages:
     - 4.9.1
     - 4.9.2
     - 4.9.3
+    - 4.9.4
     compatible:
     - 4.9.2
     - 4.9.3
-    recommended: 4.9.3
+    - 4.9.4
+    recommended: 4.9.4
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -5734,10 +5844,14 @@ m_ResolvedPackages:
     - 1.8.23
     - 1.8.24
     - 1.8.25
+    - 1.8.26
+    - 1.8.27
     compatible:
     - 1.8.24
     - 1.8.25
-    recommended: 1.8.25
+    - 1.8.26
+    - 1.8.27
+    recommended: 1.8.27
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -6006,6 +6120,8 @@ m_ResolvedPackages:
     - 2.6.0-pre.3
     - 2.6.0-pre.4
     - 2.6.2
+    - 2.6.3
+    - 2.6.4
     compatible:
     - 2.5.1
     - 2.5.2
@@ -6015,6 +6131,8 @@ m_ResolvedPackages:
     - 2.6.0-pre.3
     - 2.6.0-pre.4
     - 2.6.2
+    - 2.6.3
+    - 2.6.4
     recommended: 2.5.7
     deprecated: []
   dependencies:

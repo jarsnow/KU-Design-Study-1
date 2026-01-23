@@ -33,6 +33,12 @@ public class XR_UI_Helper : MonoBehaviour
 
     public AudioSource walking_audio;
 
+    private DateTime time_since_popup_closed = DateTime.MaxValue;
+    public GameObject[] reminder_popups;
+    public CanvasGroup reminder_canvas_group;
+    TimeSpan time_to_wait_before_showing = TimeSpan.FromSeconds(2);
+    TimeSpan time_to_fully_show = TimeSpan.FromSeconds(2);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +50,7 @@ public class XR_UI_Helper : MonoBehaviour
         UpdateMenuCloseButton();
         UpdatePanelOpacity();
         WalkAfterDelay();
+        UpdateReminderPopup();
     }
 
     private void UpdatePanelOpacity()
@@ -67,6 +74,8 @@ public class XR_UI_Helper : MonoBehaviour
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
     {
+        StartShowingReminderPopup();
+        
         current_panel_index = trialNumber;
 
         CloseAllPanels();
@@ -133,6 +142,43 @@ public class XR_UI_Helper : MonoBehaviour
             time_start = DateTime.Now;
             next_panel_close_walks_agent = false;
         }
+
+        time_since_popup_closed = DateTime.Now;
+    }
+
+
+    private void ResetReminderPopup()
+    {
+        time_since_popup_closed = DateTime.MaxValue;
+        foreach (GameObject reminder_popup in reminder_popups)
+        {
+            reminder_popup.SetActive(false);
+        }
+    }
+    
+    private void StartShowingReminderPopup()
+    {
+        ResetReminderPopup();
+        time_since_popup_closed = DateTime.Now;
+        // walk towards agent
+        if (IO_Helper.current_trial_step == 3)
+        {
+            reminder_popups[0].SetActive(true);
+        } else if (IO_Helper.current_trial_step == 4)
+        {
+            reminder_popups[1].SetActive(true);
+        } else if (IO_Helper.current_trial_step == 5)
+        {
+            reminder_popups[2].SetActive(true);
+        }
+    }
+
+    private void UpdateReminderPopup()
+    {
+        double progress = ((DateTime.Now - time_since_popup_closed) - time_to_wait_before_showing) / time_to_fully_show;
+        // cap alpha value from [0,1]
+        progress = Math.Min(Math.Max(0, progress), 1);
+        reminder_canvas_group.alpha = (float) progress;
     }
 
 }
