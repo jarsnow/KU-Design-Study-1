@@ -77,7 +77,7 @@ public class Control_UI_Helper : MonoBehaviour
         // make the npc do extra random actions while they're just standing around
         if (IO_Helper_obj.GetComponent<IO_Helper>().current_trial_step <= 2 &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") &&
-            (DateTime.Now - last_extra_anim_time) >= TimeSpan.FromSeconds(1.0f)) {
+            (DateTime.Now - last_extra_anim_time) >= TimeSpan.FromSeconds(6.0f)) {
 
 
             if (extra_idle_anims_shuffled.Count == 0)
