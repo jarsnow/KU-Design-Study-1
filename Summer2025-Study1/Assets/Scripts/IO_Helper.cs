@@ -656,6 +656,12 @@ public class IO_Helper : MonoBehaviour
 
         XRUI.GetComponent<XR_UI_Helper>().DisplayXRUIPanelFromTrialNumber(current_trial_step);
         GetComponent<TrialTriggerManager>().UpdateTrialStepControlUIFromTrialStep(current_trial_step);
+
+        // needed because there is no normal popup for the start of the third trial step
+        if (current_trial_step == 3)
+        {
+            XRUI.GetComponent<XR_UI_Helper>().StartShowingReminderPopup();
+        }
     }
 
     // record the remaining values for averages

@@ -14,7 +14,7 @@ public class Control_UI_Helper : MonoBehaviour
     public GameObject ControlUIBackground;
     public GameObject MinimizeButtonCheckmark;
 
-    private Animator animator;
+    public Animator animator;
     public Animator female_animator;
     public Animator male_animator;
 

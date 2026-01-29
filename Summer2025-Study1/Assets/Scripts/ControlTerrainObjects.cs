@@ -35,7 +35,6 @@ public class AssignRigidBodies : MonoBehaviour
 
     public void drop_planks()
     {
-        Debug.Log("hi");
         StartCoroutine(drop_planks_coroutine());
     }
 
@@ -51,6 +50,13 @@ public class AssignRigidBodies : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(10);
+
+        // remove all planks
+        foreach (GameObject obj in planks_to_fall) {
+            if (obj == null) continue;
+
+            obj.SetActive(false);
+        }
     }
 }

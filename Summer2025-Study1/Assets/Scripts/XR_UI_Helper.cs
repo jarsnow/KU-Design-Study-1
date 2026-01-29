@@ -74,8 +74,28 @@ public class XR_UI_Helper : MonoBehaviour
 
     public void DisplayXRUIPanelFromTrialNumber(int trialNumber)
     {
-        StartShowingReminderPopup();
-        
+        // set all reminder popups as inactive
+        ResetReminderPopup();
+
+        if (trialNumber == 5)
+        {
+            // delay by three seconds
+            StartCoroutine(DisplayPanelAfterDelay(5, 3f));
+        }
+        else
+        {
+            DisplayPanelNoDelayFromPanelNumber(trialNumber);
+        }
+    }
+
+    IEnumerator DisplayPanelAfterDelay(int trialNumber, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        DisplayPanelNoDelayFromPanelNumber(trialNumber);
+    }
+
+    private void DisplayPanelNoDelayFromPanelNumber(int trialNumber)
+    {
         current_panel_index = trialNumber;
 
         CloseAllPanels();
@@ -83,22 +103,26 @@ public class XR_UI_Helper : MonoBehaviour
 
         selected_panel.SetActive(true);
 
-        // test to make sure the panel appears horizontal when the user is looking up/down and next trial step occurs
-        Vector3 new_angles = UI_target_pivot_point.eulerAngles;
-        new_angles.x = 0;
-        UI_target_pivot_point.eulerAngles = new_angles;
-       
-        selected_panel.transform.position = xr_target_panel_transform.position;
-        selected_panel.transform.LookAt(xr_camera_transform);
-
-        // canvases are backwards so rotate 180
-        selected_panel.transform.Rotate(0, 180, 0);
-
         // play sound
         audio_source.Play();
 
         // reset opacity
         time_panel_opened = DateTime.Now;
+
+        // display the first popup in a static location, not in front of the user
+        if (trialNumber != 1)
+        {
+            // make sure the panel appears horizontal when the user is looking up/down and next trial step occurs
+            Vector3 new_angles = UI_target_pivot_point.eulerAngles;
+            new_angles.x = 0;
+            UI_target_pivot_point.eulerAngles = new_angles;
+
+            selected_panel.transform.position = xr_target_panel_transform.position;
+            selected_panel.transform.LookAt(xr_camera_transform);
+
+            // canvases are backwards so rotate 180
+            selected_panel.transform.Rotate(0, 180, 0);
+        }
     }
 
     public void SetNextPanelCloseToWalkAgent()
@@ -124,6 +148,7 @@ public class XR_UI_Helper : MonoBehaviour
 
         if (progress == 1)
         {
+            StartShowingReminderPopup();
             CloseAllPanels();
         }
 
@@ -144,20 +169,21 @@ public class XR_UI_Helper : MonoBehaviour
         }
 
         time_since_popup_closed = DateTime.Now;
+
     }
 
 
     private void ResetReminderPopup()
     {
-        time_since_popup_closed = DateTime.MaxValue;
         foreach (GameObject reminder_popup in reminder_popups)
         {
             reminder_popup.SetActive(false);
         }
     }
     
-    private void StartShowingReminderPopup()
+    public void StartShowingReminderPopup()
     {
+        Debug.Log("start showing now");
         ResetReminderPopup();
         time_since_popup_closed = DateTime.Now;
         // walk towards agent
