@@ -46,7 +46,7 @@ public class NPCTurnsTowardsXR : MonoBehaviour
 
     private IEnumerable TurnNPC()
     {
-        
+        yield return new WaitForSeconds(0);
     }
 
 }
