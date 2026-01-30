@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Cam_Control : MonoBehaviour
 {
-    public float sens_x = 0.03f;
-    public float sens_y = 0.03f;
 
     public Transform orientation;
     private bool isCameraLocked;
@@ -30,8 +28,8 @@ public class Cam_Control : MonoBehaviour
             return;
         }
         // get distance to move cam
-        float mouse_x = value.Get<Vector2>()[0] * (float) sens_y;
-        float mouse_y = value.Get<Vector2>()[1] * (float) sens_x;
+        float mouse_x = value.Get<Vector2>()[0] * (float) 0.02;
+        float mouse_y = value.Get<Vector2>()[1] * (float) 0.02;
 
         // this might look dumb but it works
         yRotation += mouse_x;

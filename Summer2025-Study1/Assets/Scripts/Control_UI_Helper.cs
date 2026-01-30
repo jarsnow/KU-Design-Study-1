@@ -161,7 +161,7 @@ public class Control_UI_Helper : MonoBehaviour
     {
         // canvas scale in both UI parents
         float scale = 1.5f;
-        int height = (int) ControlUIBackground.GetComponent<RectTransform>().rect.height;
+        float height = 0.25f;
         if (!isMenuMinimized)
         {
             // move UI down
