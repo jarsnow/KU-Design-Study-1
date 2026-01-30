@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player_Movement : MonoBehaviour
 {
+    public IO_Helper io_helper;
 
     // set a good speed for the player
     public float moveSpeed;
@@ -33,6 +34,11 @@ public class Player_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (io_helper.current_trial_step <= 0)
+        {
+            return;
+        }
+
         MovePlayer();
     }
 

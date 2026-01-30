@@ -2195,7 +2195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 78468670}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: WaitAndWatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2677,7 +2677,7 @@ GameObject:
   - component: {fileID: 90493627}
   - component: {fileID: 90493629}
   - component: {fileID: 90493628}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BaseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3623,7 @@ GameObject:
   - component: {fileID: 107463372}
   - component: {fileID: 107463371}
   - component: {fileID: 107463370}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4555,7 +4555,7 @@ GameObject:
   - component: {fileID: 155903483}
   - component: {fileID: 155903482}
   - component: {fileID: 155903481}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5564,7 +5564,7 @@ GameObject:
   - component: {fileID: 204872929}
   - component: {fileID: 204872931}
   - component: {fileID: 204872930}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6288,7 +6288,7 @@ GameObject:
   - component: {fileID: 230717962}
   - component: {fileID: 230717961}
   - component: {fileID: 230717960}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7405,7 +7405,7 @@ GameObject:
   - component: {fileID: 265753796}
   - component: {fileID: 265753795}
   - component: {fileID: 265753794}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8190,7 +8190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 295514871}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8620,7 +8620,7 @@ GameObject:
   - component: {fileID: 304683466}
   - component: {fileID: 304683468}
   - component: {fileID: 304683467}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8771,7 +8771,7 @@ GameObject:
   - component: {fileID: 307084853}
   - component: {fileID: 307084852}
   - component: {fileID: 307084851}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11009,7 +11009,7 @@ GameObject:
   - component: {fileID: 396522647}
   - component: {fileID: 396522648}
   - component: {fileID: 396522649}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: XRUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11610,7 +11610,7 @@ GameObject:
   - component: {fileID: 429703582}
   - component: {fileID: 429703584}
   - component: {fileID: 429703583}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12325,7 +12325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461928564}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12679,7 +12679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474380467}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13448,7 +13448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494797306}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13960,7 +13960,7 @@ GameObject:
   - component: {fileID: 515288633}
   - component: {fileID: 515288635}
   - component: {fileID: 515288634}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: OutlineImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14247,7 +14247,7 @@ GameObject:
   - component: {fileID: 527086629}
   - component: {fileID: 527086631}
   - component: {fileID: 527086630}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14963,6 +14963,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ecb230acd3a7468e8da5f5076f95372, type: 3}
   m_PrefabInstance: {fileID: 544367819}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &550717993
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
+    - _r: {r: 40, g: 40, b: 40, a: 40}
+    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &553041505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15040,7 +15083,7 @@ GameObject:
   - component: {fileID: 554635805}
   - component: {fileID: 554635807}
   - component: {fileID: 554635806}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: OutlineImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15349,7 +15392,7 @@ GameObject:
   - component: {fileID: 573954114}
   - component: {fileID: 573954116}
   - component: {fileID: 573954115}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16821,7 +16864,7 @@ GameObject:
   - component: {fileID: 608570678}
   - component: {fileID: 608570677}
   - component: {fileID: 608570676}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22189,7 +22232,7 @@ GameObject:
   - component: {fileID: 645894209}
   - component: {fileID: 645894211}
   - component: {fileID: 645894210}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22643,7 +22686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1849958636}
+  m_Material: {fileID: 1477633417}
   m_Color: {r: 0.81568635, g: 0.81568635, b: 0.81568635, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -23926,7 +23969,7 @@ GameObject:
   - component: {fileID: 714474788}
   - component: {fileID: 714474790}
   - component: {fileID: 714474789}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BaseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24002,7 +24045,7 @@ GameObject:
   - component: {fileID: 721180847}
   - component: {fileID: 721180846}
   - component: {fileID: 721180845}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24214,7 +24257,7 @@ GameObject:
   - component: {fileID: 729445935}
   - component: {fileID: 729445934}
   - component: {fileID: 729445933}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26868,7 +26911,7 @@ GameObject:
   - component: {fileID: 808313653}
   - component: {fileID: 808313655}
   - component: {fileID: 808313654}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BaseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27059,7 +27102,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -27404,7 +27447,7 @@ GameObject:
   - component: {fileID: 823942699}
   - component: {fileID: 823942701}
   - component: {fileID: 823942700}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27686,7 +27729,7 @@ GameObject:
   - component: {fileID: 846011121}
   - component: {fileID: 846011123}
   - component: {fileID: 846011122}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28442,7 +28485,7 @@ GameObject:
   - component: {fileID: 865973779}
   - component: {fileID: 865973778}
   - component: {fileID: 865973777}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29322,7 +29365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910310477}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExperimentOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29659,7 +29702,7 @@ GameObject:
   - component: {fileID: 912068919}
   - component: {fileID: 912068918}
   - component: {fileID: 912068917}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31824,6 +31867,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1a59122cae5964c368ac7fd53fc61ef3, type: 3}
   m_PrefabInstance: {fileID: 979432297}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &986989403
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
+    - _r: {r: 40, g: 40, b: 40, a: 40}
+    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &987811566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32858,7 +32944,7 @@ GameObject:
   - component: {fileID: 1062852462}
   - component: {fileID: 1062852461}
   - component: {fileID: 1062852460}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33244,7 +33330,7 @@ GameObject:
   - component: {fileID: 1070392538}
   - component: {fileID: 1070392540}
   - component: {fileID: 1070392539}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BaseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33490,6 +33576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da06ac2cbb6b7f848bc4c1fdcd615e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  io_helper: {fileID: 1601015165}
   moveSpeed: 25.04
   orientation: {fileID: 206008}
 --- !u!54 &1075173521
@@ -34727,7 +34814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128922881}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: WalkToAgent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42977,7 +43064,7 @@ GameObject:
   - component: {fileID: 1278359457}
   - component: {fileID: 1278359456}
   - component: {fileID: 1278359455}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43593,11 +43680,11 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 288
+    m_Bits: 512
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
@@ -45380,7 +45467,7 @@ GameObject:
   - component: {fileID: 1353836845}
   - component: {fileID: 1353836844}
   - component: {fileID: 1353836843}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45756,7 +45843,7 @@ GameObject:
   - component: {fileID: 1379105731}
   - component: {fileID: 1379105733}
   - component: {fileID: 1379105732}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BaseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46218,7 +46305,7 @@ GameObject:
   - component: {fileID: 1405540749}
   - component: {fileID: 1405540751}
   - component: {fileID: 1405540750}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47881,7 +47968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472297926}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47942,6 +48029,49 @@ RectTransform:
   m_AnchoredPosition: {x: -500, y: -400}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!21 &1477633417
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
+    - _r: {r: 40, g: 40, b: 40, a: 40}
+    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1481800937
 GameObject:
   m_ObjectHideFlags: 0
@@ -49483,7 +49613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1550658613}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49845,7 +49975,7 @@ GameObject:
   - component: {fileID: 1580592217}
   - component: {fileID: 1580592219}
   - component: {fileID: 1580592218}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51891,7 +52021,7 @@ GameObject:
   - component: {fileID: 1679341937}
   - component: {fileID: 1679341939}
   - component: {fileID: 1679341938}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: OutlineImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52357,7 +52487,7 @@ GameObject:
   - component: {fileID: 1697301074}
   - component: {fileID: 1697301076}
   - component: {fileID: 1697301075}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: OutlineImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52635,7 +52765,7 @@ GameObject:
   - component: {fileID: 1706509741}
   - component: {fileID: 1706509743}
   - component: {fileID: 1706509742}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: OutlineImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52907,7 +53037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717087069}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: WalkAcrossBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53770,7 +53900,7 @@ GameObject:
   - component: {fileID: 1747604097}
   - component: {fileID: 1747604096}
   - component: {fileID: 1747604095}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54264,7 +54394,7 @@ GameObject:
   - component: {fileID: 1770945289}
   - component: {fileID: 1770945288}
   - component: {fileID: 1770945287}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54565,7 +54695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791562538}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: MenuExitArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55705,49 +55835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13a585ce296c04aa38dcd3e2748d11fc, type: 3}
   m_PrefabInstance: {fileID: 1849247075}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1849958636
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
-    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
-    - _r: {r: 40, g: 40, b: 40, a: 40}
-    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1854935522
 GameObject:
   m_ObjectHideFlags: 0
@@ -56132,49 +56219,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1031b72d33acb4c2bb7c8e8a0b594830, type: 3}
   m_PrefabInstance: {fileID: 1863878122}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1872577316
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
-    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
-    - _r: {r: 40, g: 40, b: 40, a: 40}
-    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1876293437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56541,7 +56585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1896130275}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: PleaseWait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56914,7 +56958,7 @@ GameObject:
   - component: {fileID: 1904729042}
   - component: {fileID: 1904729044}
   - component: {fileID: 1904729043}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57755,7 +57799,7 @@ GameObject:
   - component: {fileID: 1954366584}
   - component: {fileID: 1954366583}
   - component: {fileID: 1954366582}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58117,7 +58161,7 @@ GameObject:
   - component: {fileID: 1971192289}
   - component: {fileID: 1971192288}
   - component: {fileID: 1971192287}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58551,49 +58595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986364660}
   m_CullTransparentMesh: 1
---- !u!21 &1995289564
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
-    - _halfSize: {r: 325, g: 100, b: 0, a: 0}
-    - _r: {r: 40, g: 40, b: 40, a: 40}
-    - _rect2props: {r: 0.000061035156, g: 0.000030517578, b: 272.2361, a: 272.2361}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1997545533
 GameObject:
   m_ObjectHideFlags: 0
@@ -58659,7 +58660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1995289564}
+  m_Material: {fileID: 550717993}
   m_Color: {r: 0.81568635, g: 0.81568635, b: 0.81568635, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -60609,7 +60610,7 @@ GameObject:
   - component: {fileID: 2072531435}
   - component: {fileID: 2072531434}
   - component: {fileID: 2072531433}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60790,7 +60791,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 811183932}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -60970,7 +60971,7 @@ GameObject:
   - component: {fileID: 2076596691}
   - component: {fileID: 2076596690}
   - component: {fileID: 2076596689}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61173,7 +61174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1872577316}
+  m_Material: {fileID: 986989403}
   m_Color: {r: 0.81568635, g: 0.81568635, b: 0.81568635, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -61553,7 +61554,7 @@ GameObject:
   - component: {fileID: 2097066669}
   - component: {fileID: 2097066671}
   - component: {fileID: 2097066670}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62017,7 +62018,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101154894}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2101154898
 Camera:
   m_ObjectHideFlags: 0
@@ -62057,7 +62058,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -62557,7 +62558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111061583}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: GoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

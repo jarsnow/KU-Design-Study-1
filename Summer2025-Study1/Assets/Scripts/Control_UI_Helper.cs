@@ -161,7 +161,7 @@ public class Control_UI_Helper : MonoBehaviour
     {
         // canvas scale in both UI parents
         float scale = 1.5f;
-        float height = 0.25f;
+        float height = 0.115f;
         if (!isMenuMinimized)
         {
             // move UI down
