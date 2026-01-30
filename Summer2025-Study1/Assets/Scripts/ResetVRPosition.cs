@@ -22,13 +22,14 @@ public class ResetVRPosition : MonoBehaviour
 
     public void ResetPos()
     {
+        const float xr_height = 0.25f;
         // do 5 times because it works only after the first one??? no idea why but it works
         for (int i = 0; i < 5; i++)
         {
             // reset position to origin point
             Vector3 offset = xr_head.position - xr_rig.position;
             xr_rig.position = starting_transform.position - offset;
-            xr_rig.position = new Vector3(xr_rig.position.x, 0, xr_rig.position.z);
+            xr_rig.position = new Vector3(xr_rig.position.x, xr_height, xr_rig.position.z);
 
             float difference = starting_transform.eulerAngles.y - xr_head.eulerAngles.y;
             xr_rig.Rotate(0f, difference, 0f, Space.World);

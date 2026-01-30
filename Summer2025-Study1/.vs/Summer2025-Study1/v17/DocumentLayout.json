@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\",
+  "WorkspaceRootPath": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\assets\\scripts\\control_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\control_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\control_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\j634r988\\documents\\github\\ku-design-study-1\\summer2025-study1\\assets\\scripts\\io_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\io_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\scripts\\cam_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cam_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\j634r988\\documents\\github\\ku-design-study-1\\summer2025-study1\\assets\\scripts\\npcturnstowardsxr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\scripts\\resetvrposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resetvrposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|c:\\users\\john\\documents\\repos\\new_study_1\\summer2025-study1\\assets\\scripts\\npcturnstowardsxr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npcturnstowardsxr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\assets\\scripts\\xr_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\xr_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\xr_ui_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\assets\\scripts\\triggers\\closetoagenttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\assets\\scripts\\triggers\\closetoagenttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C674AE5C-85F2-C1FF-3AB5-D0A038787122}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\triggers\\closetoagenttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,30 +34,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IO_Helper.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\IO_Helper.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\IO_Helper.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\IO_Helper.cs",
-              "RelativeToolTip": "Assets\\Scripts\\IO_Helper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Cam_Control.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Cam_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cam_Control.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Cam_Control.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cam_Control.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T22:04:18.215Z",
+              "WhenOpened": "2026-01-30T16:25:25.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "ResetVRPosition.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\ResetVRPosition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ResetVRPosition.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\ResetVRPosition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ResetVRPosition.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T16:16:10.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "XR_UI_Helper.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\XR_UI_Helper.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\XR_UI_Helper.cs",
               "RelativeToolTip": "Assets\\Scripts\\XR_UI_Helper.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAowG8AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAgwFwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T17:25:38.103Z"
             },
@@ -61,22 +78,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Control_UI_Helper.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Control_UI_Helper.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Control_UI_Helper.cs",
               "RelativeToolTip": "Assets\\Scripts\\Control_UI_Helper.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAwwE8AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T16:26:17.872Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CloseToAgentTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\Triggers\\CloseToAgentTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -84,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NPCTurnsTowardsXR.cs",
-              "DocumentMoniker": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\NPCTurnsTowardsXR.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\NPCTurnsTowardsXR.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPCTurnsTowardsXR.cs",
-              "ToolTip": "C:\\Users\\j634r988\\Documents\\GitHub\\KU-Design-Study-1\\Summer2025-Study1\\Assets\\Scripts\\NPCTurnsTowardsXR.cs",
+              "ToolTip": "C:\\Users\\John\\Documents\\repos\\new_study_1\\Summer2025-Study1\\Assets\\Scripts\\NPCTurnsTowardsXR.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPCTurnsTowardsXR.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAjwC8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T18:14:32.535Z",
               "EditorCaption": ""
