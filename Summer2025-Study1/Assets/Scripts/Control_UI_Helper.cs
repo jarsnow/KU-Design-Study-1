@@ -44,7 +44,6 @@ public class Control_UI_Helper : MonoBehaviour
     void Start()
     {
         reshuffle_extra_idle_anims();
-        animator = female_animator;
     }
 
     // Update is called once per frame
@@ -116,7 +115,7 @@ public class Control_UI_Helper : MonoBehaviour
         if (npc_gender == "female")
         {
             animator = female_animator;
-        } else
+        } else if (npc_gender == "male")
         {
             animator = male_animator;
         }

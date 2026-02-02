@@ -224,13 +224,14 @@ public class IO_Helper : MonoBehaviour
         {
             female_model.SetActive(true);
             male_model.SetActive(false);
-            control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("female");
+            Debug.Log("called female");
             control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("female");
         }
         else
         {
             female_model.SetActive(false);
             male_model.SetActive(true);
+            Debug.Log("called male");
             control_ui.GetComponent<Control_UI_Helper>().updateActiveNPCModel("male");
         }
 

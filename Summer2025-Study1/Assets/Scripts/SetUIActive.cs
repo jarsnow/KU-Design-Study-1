@@ -8,6 +8,8 @@ public class SetUIActive : MonoBehaviour
     void Start()
     {
         StartUI.SetActive(true);
+        Debug.developerConsoleEnabled = true;
+        Debug.developerConsoleVisible = true;
     }
 
     // Update is called once per frame

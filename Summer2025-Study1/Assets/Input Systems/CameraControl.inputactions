@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "CameraControl",
     "maps": [
         {
@@ -11,15 +12,17 @@
                     "id": "1a6a6f33-56e5-4d07-881c-6df4d57a59dd",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ToggleLock",
                     "type": "Button",
                     "id": "8934603e-014c-4d9d-98ad-76326ceb4f97",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -31,17 +34,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "CameraMove",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5804a234-2877-4410-b012-ed375d7c3000",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ToggleLock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
