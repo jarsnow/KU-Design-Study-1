@@ -63,7 +63,7 @@ public class Control_UI_Helper : MonoBehaviour
         // turn around but only once, after done with the animation
         if (is_done_walking && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !has_turned_around)
         {
-            NPC.transform.Rotate(0, 180, 0);
+            NPC.transform.Rotate(0, 145, 0);
             has_turned_around = true;
         }
 

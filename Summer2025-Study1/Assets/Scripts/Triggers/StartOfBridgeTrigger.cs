@@ -19,7 +19,6 @@ public class StartOfBridgeTrigger : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        // step 5 goes to 6
         if (IO.current_trial_step == 5 && other.CompareTag("VRHead"))
         {
             IO.AdvanceTrial();

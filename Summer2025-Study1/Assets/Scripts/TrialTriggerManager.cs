@@ -44,6 +44,11 @@ public class TrialTriggerManager : MonoBehaviour
                 start_of_room_trigger_popup.SetActive(true);
                 break;
 
+            case 6:
+                // just hide the button
+                Debug.Log("hello");
+                break;
+
             default:
                 trial_step_button.SetActive(true);
                 break;
